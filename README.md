@@ -2,6 +2,8 @@
 
 # Primitive functions for Cryptographic systems
 
+# Primitive Functions for Cryptographic Systems
+
 In the realms of cryptographic systems, including AES-Rijndael, RSA, and Diffie-Hellman, a fundamental reliance on mathematical principles underpins secure communication. The initiation of these protocols involves receiving input values or keys, marked as $\alpha$ and $\beta$. These inputs are pivotal, fueling the ensuing series of transformations and encryptions. An initial transformation function, denoted as $\Phi$, adapts these inputs for further cryptographic processes. This function's nature varies across algorithms: $\Phi$ might signify key expansion within AES, the derivation of public keys in Diffie-Hellman, or engage in modular arithmetic for RSA key creation.
 
 The core of these cryptographic systems is encapsulated in the key generation process, symbolized by $\Lambda$. This function processes the initial inputs, possibly alongside significant prime or composite numbers ($\eta$ or $\xi$), to concoct encryption and decryption keys. The essence of RSA lies in harnessing these prime numbers to forge a robust framework for secure key exchanges. In contrast, Diffie-Hellman utilizes them to generate a shared secret across an unsecured channel, whereas AES orchestrates a similar methodology to produce a series of round keys for its cipher operations.
@@ -10,33 +12,29 @@ Central to the operation of these systems are the encryption and decryption proc
 
 An additional security dimension is woven into these systems through pseudo-random operations, encapsulated by the function $\Gamma$. This function introduces complexity and unpredictability, countering pattern recognition tactics like those utilized in differential power analysis. The integration of pseudo-random values within the encryption methodology or during key generation fortifies the algorithms' resilience against a spectrum of cryptographic assaults. Despite the unique mechanisms and applications distinguishing AES-Rijndael, RSA, and Diffie-Hellman, their commonality lies in the processing of initial values, the execution of complex transformations for key generation, and the fundamental principles governing encryption and decryption. Each algorithm deploys mathematical rigor and computational complexity to safeguard data integrity, underpinned by the security afforded by prime number theory and modular arithmetic.
 
+## Theory
 
-Although AES-Rijndael, RSA, and Diffie-Hellman differ in their specific mechanisms and use cases, they share a reliance on initial value processing, complex transformations for key generation, and the fundamental principles of encryption and decryption. Each system utilizes mathematical rigor and computational complexity to achieve its security goals, with prime number theory and modular arithmetic forming the backbone of these cryptographic giants.
+Cryptographic systems, such as AES-Rijndael, RSA, and Diffie-Hellman, secure communication is facilitated through a series of mathematical transformations. The commencement of these protocols entails the reception of input values or keys, symbolized as $\alpha$ and $\beta$. These initial inputs are foundational, paving the way for the ensuing key generation and encryption processes. They undergo an initial transformation function, denoted as $\Phi$, which varies across algorithms:
 
+- In AES-Rijndael, $\Phi$ potentially signifies key expansion.
+- For Diffie-Hellman, $\Phi$ is typically associated with the generation of public keys.
+- Within RSA, $\Phi$ encompasses the modular arithmetic essential for the creation of public and private keys.
 
-In cryptographic systems like AES-Rijndael, RSA, and Diffie-Hellman, secure communication is enabled through a series of mathematical transformations. The initial stage in these algorithms involves the acceptance of input values or keys, denoted by $\alpha$ and $\beta$. These inputs are essential, as they set the stage for the key generation and encryption processes that follow. They are subjected to an initial transformation function, $\Phi$, which can take different forms depending on the algorithm:
-
-- For AES-Rijndael, $\Phi$ might represent key expansion.
-- In Diffie-Hellman, $\Phi$ typically involves generating public keys.
-- For RSA, $\Phi$ could represent the modular arithmetic used in generating public and private keys.
-
-This can be represented mathematically as:
+This is mathematically represented as:
 $$\Phi(\alpha, \beta) \rightarrow \text{Intermediate values for further processing}$$
 
-Key generation, represented by the function $\Lambda$, is the next critical step. It leverages the initial inputs and may incorporate large prime or composite numbers, symbolized by $\eta$ or $\xi$, to produce keys essential for the encryption and decryption processes. This step is described by the equation:
+Following this, the key generation phase, symbolized by the function $\Lambda$, plays a pivotal role. It utilizes the initial inputs alongside potentially significant prime or composite numbers, represented by $\eta$ or $\xi$, to forge keys crucial for the encryption and decryption mechanisms. This pivotal step is mathematically articulated as:
 $$\Lambda(\alpha, \beta, \eta \text{ or } \xi) \rightarrow \text{Keys for encryption and decryption}$$
 
-For encryption and decryption, the algorithms use two functions, $\Omega$ for encryption and $\Theta$ for decryption, which utilize the keys generated by $\Lambda$ to transform plaintext to ciphertext and vice versa:
+Central to these cryptographic frameworks are the encryption and decryption functions, $\Omega$ and $\Theta$, respectively. These functions, employing the keys generated by $\Lambda$, convert plaintext to ciphertext and inversely:
 $$\Omega(\text{Plaintext}, \text{Key}) \rightarrow \text{Ciphertext}$$
 $$\Theta(\text{Ciphertext}, \text{Key}) \rightarrow \text{Plaintext}$$
 
-These functions perform complex mathematical operations like modular exponentiation, ensuring that without the correct keys, deciphering the encrypted data remains a challenging task.
+Executing complex mathematical operations, such as modular exponentiation, these functions ensure the infeasibility of decrypting encrypted data without the appropriate keys.
 
-An additional security layer is introduced by the function $\Gamma$, which handles pseudo-random operations to add complexity and unpredictability, effectively enhancing the security of cryptographic processes. This could involve generating pseudo-random values for use in the encryption process or the generation of cryptographic keys:
-$$\Gamma(\text{Input parameters}) \rightarrow \text{Pseudo-random values or sequences}$$
+Further enhancing these cryptographic systems' security is the introduction of pseudo-random operations via the function $\Gamma$. This function injects complexity and unpredictability into the cryptographic workflow, counteracting pattern recognition strategies utilized in attacks like differential power analysis. Incorporating pseudo-random values into either the encryption procedure or the cryptographic key generation process strengthens the algorithms' defenses against assorted cryptographic threats.
 
-While AES-Rijndael, RSA, and Diffie-Hellman have unique mechanisms and applications, they share fundamental principles like the processing of initial values, complex transformations for key generation, and encryption/decryption methods. All three algorithms employ mathematical rigor and computational complexity, relying on the security provided by prime number theory and modular arithmetic to protect data.
-
+Despite the unique functionalities and applications distinguishing AES-Rijndael, RSA, and Diffie-Hellman, they converge on the reliance on initial value processing, sophisticated transformations for key generation, and the fundamental tenets of encryption and decryption. Each algorithm leverages mathematical precision and computational complexity, fortified by the protective measures of prime number theory and modular arithmetic, to safeguard data integrity.
 
 ## Key of Greek Symbols and Mathematical Notation
 
@@ -80,9 +78,10 @@ Pseudo Code Algorithm Sequence:
 - **Generation of Pseudo-random Values:**
   - $\Gamma() \rightarrow random\_value$
 
-
+# Claims 
 
 ## Claim 1: Key Generation Improvement
+
 - **Context**: In a key generator for AES—Rijndael algorithm.
 - **Objective**: Generate round-key words "on-the-fly" in reverse direction for decryption.
 - **Method Steps**:
@@ -93,23 +92,28 @@ Pseudo Code Algorithm Sequence:
 - **Implementation**: As a hardware circuit with multiple S-boxes for S-box byte substitutions, featuring different power consumption signatures. A pseudo-random generator selects pathways to these S-boxes during key expansion.
 
 ## Claim 2: Pseudo-random Generator Specification
+
 - **Relation**: Refers to the method of claim 1.
 - **Specification**: The pseudo-random generator is detailed as a linear feedback shift register with n-bit output, coupled with a look-up table for pathway selection control signals.
 
 ## Claim 3: Differential Power Analysis Countermeasure
+
 - **Context**: In a hardware block cipher circuit with a pre-mix XOR operation.
 - **Objective**: Introduce a countermeasure against differential power analysis.
 - **Implementation**: A dummy circuit with matched propagation delay to the pre-mix subcircuit, incorporating a pseudo-random generator and an XOR array, to insert pseudo-random noise into the power signature during the initial pre-mix XOR operation.
 
 ## Claim 4: Pseudo-random Generator Detail for Claim 3
+
 - **Relation**: Refers to the circuit of claim 3.
 - **Specification**: The pseudo-random generator consists of linear feedback shift registers.
 
 ## Claim 5: Word Width Matching
+
 - **Relation**: Refers to the circuit of claim 3.
 - **Specification**: The pseudo-random generator and XOR array of the dummy circuit match the word width in bits of the pre-mix subcircuit.
 
 ## Claim 6: Pre-mix and Encryption Round Combination
+
 - **Context**: In a hardware block cipher circuit for a cipher algorithm.
 - **Objective**: Combine the pre-mix operation with the first cipher encryption round.
 - **Method Steps**:
@@ -118,9 +122,25 @@ Pseudo Code Algorithm Sequence:
 
 Each claim specifies a novel aspect of the cryptographic process, focusing on efficiency, security (particularly against differential power analysis), and the practical implementation of these cryptographic methods in hardware. The structure of these claims reflects a typical approach in patent documentation to provide a clear definition of the inventive elements, their implementation details, and, in some cases, specific embodiments or applications of the invention.
 
+## The Sequence
+
+The cryptographic methods AES-Rijndael, RSA, and Diffie-Hellman, while each unique in design and application, fundamentally rely on shared mathematical principles to enable secure communication. This common ground is highlighted in their methodical approach to initializing variables, transforming initial inputs, generating keys, performing encryption/decryption processes, and incorporating pseudo-random operations for enhanced security.
+
+1. **Initial Variable Initialization**: The algorithms commence with the acquisition of initial values or keys, denoted as $\alpha$ and $\beta$. This foundational step is crucial for seeding the subsequent encryption and key generation processes, illustrating the algorithms' reliance on initial parameters to kickstart the cryptographic sequence.
+
+2. **Transformation of Inputs**: Each system employs an initial transformation function $\Phi$, which adapts $\alpha$ and $\beta$ for subsequent cryptographic operations. This function varies across algorithms, illustrating their adaptability and the versatile application of core mathematical concepts. For instance, $\Phi$ may represent key expansion in AES-Rijndael, public key generation in Diffie-Hellman, or modular arithmetic in RSA.
+
+3. **Key Generation Process**: The function $\Lambda$ symbolizes the key generation phase, which is pivotal across these cryptographic frameworks. It utilizes the transformed inputs, and, depending on the algorithm, large prime or composite numbers ($\eta$ or $\xi$), to generate the keys essential for encryption and decryption. This phase underscores the algorithms' dependence on complex mathematical operations to secure the generated keys.
+
+4. **Encryption and Decryption**: At the heart of these systems are the encryption ($\Omega$) and decryption ($\Theta$) functions. They leverage the keys produced by $\Lambda$ to convert plaintext into ciphertext and vice versa, embodying the core purpose of cryptographic algorithms. These operations depend on intricate mathematical computations, ensuring the security of encrypted data by making decryption without the correct keys computationally impractical.
+
+5. **Pseudo-Random Operations**: The introduction of pseudo-random operations via the function $\Gamma$ adds an additional layer of security. This complexity and unpredictability help thwart pattern recognition and other analytical attacks, further enhancing the cryptographic algorithms' resilience.
+
+In essence, while AES-Rijndael, RSA, and Diffie-Hellman each have distinct applications and mechanisms, their shared reliance on initial input processing, key generation transformations, and encryption/decryption principles highlight a unified foundation in mathematical rigor and computational complexity. Prime number theory and modular arithmetic serve as the backbone of these cryptographic standards, ensuring data integrity and security across various digital communication platforms.
+
+## Greek Symbol Key
 - $\alpha, \beta$: Input variables, representing initial values or keys.
 - $\Phi$: General transformation or function, applicable in various contexts such as key expansion, encryption, or modular exponentiation.
-- $\Psi$: XOR logic operation or another binary operation used in transformations.
 - $\Lambda$: Function for key generation or the process of deriving new values in a cryptographically secure manner.
 - $\Omega$: Encryption function, transforming plaintext into ciphertext using keys and specific operations.
 - $\Theta$: Decryption function, the inverse of $\Omega$, recovering plaintext from ciphertext.
@@ -129,16 +149,14 @@ Each claim specifies a novel aspect of the cryptographic process, focusing on ef
 
 ## Common Cryptographic Algorithm Sequence
 
-| Step | Process                  | Mathematical Representation              |
-|------|--------------------------|------------------------------------------|
-| 1    | Input Reception          | Receive $\alpha$ and $\beta$ as inputs.  |
+| Step | Process                  | Mathematical Representation                                         |
+|------|--------------------------|---------------------------------------------------------------------|
+| 1    | Input Reception          | Receive $\alpha$ and $\beta$ as inputs.                             |
 | 2    | Initial Transformation   | Apply $\Phi$ to $\alpha$ and $\beta$, generating intermediate values. |
 | 3    | Key Generation           | Use $\Lambda$ with inputs $\alpha$, $\beta$, and possibly $\eta$ or $\xi$ to generate keys. |
 | 4    | Encryption/Decryption    | Apply $\Omega$ for encryption and $\Theta$ for decryption using generated keys. |
 | 5    | Pseudo-random Operations | Utilize $\Gamma$ for operations requiring pseudo-randomness or additional security measures. |
 
-
-The claims related to cryptographic key generation and encryption mechanisms, specifically in the context of the Advanced Encryption Standard (AES)—Rijndael block cipher algorithm. Here's a breakdown of these claims into a more structured format for clarity:
 
 ----
 
