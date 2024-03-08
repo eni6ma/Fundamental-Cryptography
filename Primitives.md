@@ -229,27 +229,46 @@ fn main() {
 }
 
 // Define shift function
-fn shift_function(plaintext: &str) -> String {
+fn shift_function(plaintext: &str, shift_amount: usize, direction: &str) -> String {
     // Implement shift operation (left or right shift)
-    format!("{} (shifted)", plaintext)
+    let shifted = if direction == "left" {
+        plaintext.chars().cycle().skip(shift_amount).take(plaintext.len()).collect()
+    } else {
+        plaintext.chars().cycle().skip(plaintext.len() - shift_amount).take(plaintext.len()).collect()
+    };
+    format!("{} (shifted {} by {})", plaintext, direction, shift_amount)
 }
 
 // Define XOR function
 fn xor_function(key: &str, data: &str) -> String {
     // Implement XOR operation
-    format!("{} XOR {}", key, data)
+    let mut result = String::new();
+    for (k, d) in key.chars().zip(data.chars()) {
+        result.push((k as u8 ^ d as u8) as char);
+    }
+    result
 }
 
 // Define logarithmic function
 fn logarithmic_function(data: &str, ciphertext: &str) -> String {
     // Implement optional logarithmic operation
-    format!("{} (logarithmic operation) XOR {}", data, ciphertext)
+    let mut result = String::new();
+    for (d, c) in data.chars().zip(ciphertext.chars()) {
+        result.push((d as u8 ^ c as u8) as char);
+    }
+    result
 }
 
 // Define shift inverse function
-fn shift_inverse_function(data: &str) -> String {
+fn shift_inverse_function(data: &str, shift_amount: usize, direction: &str) -> String {
     // Implement shift inverse operation
-    format!("{} (shift inverse)", data)
+    let shifted = if direction == "left" {
+        data.chars().cycle().skip(data.len() - shift_amount).take(data.len()).collect()
+    } else {
+        data.chars().cycle().skip(shift_amount).take(data.len()).collect()
+    };
+    format!("{} (shift inverse {} by {})", data, direction, shift_amount)
 }
+
 ```
 
