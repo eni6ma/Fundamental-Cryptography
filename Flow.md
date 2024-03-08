@@ -1,3 +1,4 @@
+
 ```mermaid
 flowchart TD
     subgraph "Claim 1: Key Generation Improvement"
@@ -5,16 +6,16 @@ flowchart TD
             c1["In a key generator for AES—Rijndael algorithm"]
         end
         subgraph "Objective"
-            c2["Generate round-key words 'on-the-fly' in reverse direction for decryption"]
+            c2["Generate round-key words 'on-the-fly' for decryption"]
         end
         subgraph "Method Steps"
-            c3["Provide memory for storing a final set of $N_k$ round-key words"]
-            c4["Perform key expansion in a forward direction during encryption, storing the final $N_k$ words"]
+            c3["Provide memory for storing final set of $N_k$ round-key words"]
+            c4["Perform key expansion during encryption"]
             c5["Set key generator for decryption"]
-            c6["Derive preceding round-key words 'on-the-fly' using XOR logic, with specific conditions for transformations"]
+            c6["Derive preceding round-key words using XOR logic"]
         end
         subgraph "Implementation"
-            c7["As a hardware circuit with multiple S-boxes for S-box byte substitutions, featuring different power consumption signatures. A pseudo-random generator selects pathways to these S-boxes during key expansion"]
+            c7["As a hardware circuit with multiple S-boxes"]
         end
         c1 --> c2
         c2 --> c3
@@ -28,7 +29,7 @@ flowchart TD
             c8["Refers to the method of claim 1"]
         end
         subgraph "Specification"
-            c9["The pseudo-random generator is detailed as a linear feedback shift register with n-bit output, coupled with a look-up table for pathway selection control signals"]
+            c9["The pseudo-random generator is detailed as a linear feedback shift register with n-bit output"]
         end
         c8 --> c9
     end
@@ -40,7 +41,7 @@ flowchart TD
             c11["Introduce a countermeasure against differential power analysis"]
         end
         subgraph "Implementation"
-            c12["A dummy circuit with matched propagation delay to the pre-mix subcircuit, incorporating a pseudo-random generator and an XOR array, to insert pseudo-random noise into the power signature during the initial pre-mix XOR operation"]
+            c12["A dummy circuit with matched propagation delay to the pre-mix subcircuit"]
         end
         c10 --> c11
         c11 --> c12
@@ -59,7 +60,7 @@ flowchart TD
             c15["Refers to the circuit of claim 3"]
         end
         subgraph "Specification"
-            c16["The pseudo-random generator and XOR array of the dummy circuit match the word width in bits of the pre-mix subcircuit"]
+            c16["The pseudo-random generator and XOR array match the word width in bits"]
         end
         c15 --> c16
     end
@@ -71,11 +72,21 @@ flowchart TD
             c18["Combine the pre-mix operation with the first cipher encryption round"]
         end
         subgraph "Method Steps"
-            c19["Pre-process the cipher key for first cipher encryption round key words while loading plaintext"]
-            c20["Execute the first cipher encryption round on the pre-mixed plaintext with pre-generated first round-key words"]
+            c19["Pre-process the cipher key for first cipher encryption round"]
+            c20["Execute the first cipher encryption round on the pre-mixed plaintext"]
         end
         c17 --> c18
         c18 --> c19
         c19 --> c20
     end
 ```
+
+## Greek Symbol Key
+- $\alpha$: Input variables, representing initial values or keys.
+- $\Phi$: General transformation or function.
+- $\Psi$: XOR logic operation or another binary operation.
+- $\Lambda$: Function for key generation.
+- $\Omega$: Encryption function.
+- $\Theta$: Decryption function.
+- $\eta, \xi$: Large prime numbers or composite numbers.
+- $\Gamma$: Function for pseudo-random values or sequences.
