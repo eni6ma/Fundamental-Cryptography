@@ -1,5 +1,7 @@
 # Fundamental-Cryptography
 
+by Dylan Rosario (Inventor of Rosario Cypher, Chairman of Eni6ma.org)
+
 ## Primitive functions for Cryptographic systems
 
 In the realms of cryptographic systems, including AES-Rijndael, RSA, and Diffie-Hellman, a fundamental reliance on mathematical principles underpins secure communication. The initiation of these protocols involves receiving input values or keys, marked as $\alpha$ and $\beta$. These inputs are pivotal, fueling the ensuing series of transformations and encryptions. An initial transformation function, denoted as $\Phi$, adapts these inputs for further cryptographic processes. This function's nature varies across algorithms: $\Phi$ might signify key expansion within AES, the derivation of public keys in Diffie-Hellman, or engage in modular arithmetic for RSA key creation.
