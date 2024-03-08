@@ -1,4 +1,23 @@
 
+Sure, here's an example of a Mermaid flowchart with embedded math equations:
+
+```mermaid
+graph TD;
+    A[Square Rect] -- Link text --> B((Circle));
+    A --> C(Round Rect);
+    B --> D{Rhombus};
+    C --> D;
+    D --> E[Square];
+    D --> F((Circle));
+
+    subgraph Mathematics
+        a[\\(x = \\frac{-b \\pm \\sqrt{b^2 - 4ac}}{2a}\\)] -- Example equation --> b[\\(E = mc^2\\)];
+        b -- Another example equation --> c[\\(F = \\int_a^b \\frac{1}{x} \\, dx\\)];
+    end
+```
+
+In this flowchart, the Mathematics subgraph contains nodes with embedded math equations.
+
 Here's the Mermaid diagram for the secret commitment ceremony algorithm including Alice, Bob, and Victor stages:
 
 ```mermaid
