@@ -3,27 +3,46 @@
 # Primitive functions for Cryptographic systems
 ## Key of Greek Symbols and Mathematical Notation
 
-- $\alpha, \beta$: Input variables, representing initial values or keys.
-- $\Phi$: General transformation or function, applicable in various contexts such as key expansion, encryption, or modular exponentiation.
-- $\Psi$: XOR logic operation or another binary operation used in transformations.
-- $\Lambda$: Function for key generation or the process of deriving new values in a cryptographically secure manner.
-- $\Omega$: Encryption function, transforming plaintext into ciphertext using keys and specific operations.
-- $\Theta$: Decryption function, the inverse of $\Omega$, recovering plaintext from ciphertext.
-- $\eta, \xi$: Large prime numbers or composite numbers, foundational to the security of cryptographic algorithms.
-- $\Gamma$: Function representing the generation or application of pseudo-random values or sequences.
+Pseudo Code Algorithm Sequence:
 
-## Common Cryptographic Algorithm Sequence
+1. Initialize Variables
+   $\alpha, \beta$
 
-| Step | Process                  | Mathematical Representation              |
-|------|--------------------------|------------------------------------------|
-| 1    | Input Reception          | Receive $\alpha$ and $\beta$ as inputs.  |
-| 2    | Initial Transformation   | Apply $\Phi$ to $\alpha$ and $\beta$, generating intermediate values. |
-| 3    | Key Generation           | Use $\Lambda$ with inputs $\alpha$, $\beta$, and possibly $\eta$ or $\xi$ to generate keys. |
-| 4    | Encryption/Decryption    | Apply $\Omega$ for encryption and $\Theta$ for decryption using generated keys. |
-| 5    | Pseudo-random Operations | Utilize $\Gamma$ for operations requiring pseudo-randomness or additional security measures. |
+2. Initial Transformations
+   $\gamma = \Phi(\alpha)$
+   $\delta = \Phi(\beta)$
 
+3. Key Generation
+   if $\eta$ and $\xi$ are provided:
+       $keys = \Lambda(\alpha, \beta, \eta, \xi)$
+   else:
+       $keys = \Lambda(\alpha, \beta)$
 
-The claims related to cryptographic key generation and encryption mechanisms, specifically in the context of the Advanced Encryption Standard (AES)—Rijndael block cipher algorithm. Here's a breakdown of these claims into a more structured format for clarity:
+4. Encryption/Decryption
+   $C = \Omega(M, keys)$
+   $M = \Theta(C, keys)$
+
+5. Pseudo-random Operations
+   $random\_value = \Gamma()$
+
+Explicit Equations in LaTeX:
+
+- For the Initial Transformation:
+  $\Phi(\alpha) \rightarrow \gamma$
+  $\Phi(\beta) \rightarrow \delta$
+
+- For the Key Generation Function:
+  $\Lambda(\alpha, \beta, \eta, \xi) \rightarrow keys$
+
+- For the Encryption Function:
+  $\Omega(M, keys) \rightarrow C$
+
+- For the Decryption Function:
+  $\Theta(C, keys) \rightarrow M$
+
+- For the Generation of Pseudo-random Values or Sequences:
+  $\Gamma() \rightarrow random\_value$
+
 
 ## Claim 1: Key Generation Improvement
 - **Context**: In a key generator for AES—Rijndael algorithm.
@@ -61,6 +80,27 @@ The claims related to cryptographic key generation and encryption mechanisms, sp
 
 Each claim specifies a novel aspect of the cryptographic process, focusing on efficiency, security (particularly against differential power analysis), and the practical implementation of these cryptographic methods in hardware. The structure of these claims reflects a typical approach in patent documentation to provide a clear definition of the inventive elements, their implementation details, and, in some cases, specific embodiments or applications of the invention.
 
+- $\alpha, \beta$: Input variables, representing initial values or keys.
+- $\Phi$: General transformation or function, applicable in various contexts such as key expansion, encryption, or modular exponentiation.
+- $\Psi$: XOR logic operation or another binary operation used in transformations.
+- $\Lambda$: Function for key generation or the process of deriving new values in a cryptographically secure manner.
+- $\Omega$: Encryption function, transforming plaintext into ciphertext using keys and specific operations.
+- $\Theta$: Decryption function, the inverse of $\Omega$, recovering plaintext from ciphertext.
+- $\eta, \xi$: Large prime numbers or composite numbers, foundational to the security of cryptographic algorithms.
+- $\Gamma$: Function representing the generation or application of pseudo-random values or sequences.
+
+## Common Cryptographic Algorithm Sequence
+
+| Step | Process                  | Mathematical Representation              |
+|------|--------------------------|------------------------------------------|
+| 1    | Input Reception          | Receive $\alpha$ and $\beta$ as inputs.  |
+| 2    | Initial Transformation   | Apply $\Phi$ to $\alpha$ and $\beta$, generating intermediate values. |
+| 3    | Key Generation           | Use $\Lambda$ with inputs $\alpha$, $\beta$, and possibly $\eta$ or $\xi$ to generate keys. |
+| 4    | Encryption/Decryption    | Apply $\Omega$ for encryption and $\Theta$ for decryption using generated keys. |
+| 5    | Pseudo-random Operations | Utilize $\Gamma$ for operations requiring pseudo-randomness or additional security measures. |
+
+
+The claims related to cryptographic key generation and encryption mechanisms, specifically in the context of the Advanced Encryption Standard (AES)—Rijndael block cipher algorithm. Here's a breakdown of these claims into a more structured format for clarity:
 
 ----
 
