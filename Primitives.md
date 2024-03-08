@@ -185,6 +185,7 @@ $$
 
 Mathematically, the decryption process can be represented as:
 
+
 $$
 \alpha = (\text{Ψ} \oplus \phi) \, \text{Φ}_{\beta}^{-1}(\text{Φ}_{\beta}(\alpha))
 $$
