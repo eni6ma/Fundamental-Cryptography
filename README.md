@@ -162,7 +162,7 @@ In essence, while AES-Rijndael, RSA, and Diffie-Hellman each have distinct appli
 
 ----
 
-# AES : Cyptography Sequence
+# AES : Cyptography 
 
 The claims related to cryptographic key generation and encryption mechanisms, specifically in the context of the Advanced Encryption Standard (AES)—Rijndael block cipher algorithm. Here's a breakdown of these claims into a more structured format for clarity:
 
@@ -233,7 +233,7 @@ Each claim specifies a novel aspect of the cryptographic process, focusing on ef
 
 ----
 
-# Diffie Hellman - Encryption
+# Diffie Hellman - Key Exchange
 
 The Diffie-Hellman claims detail the invention of a secure key generation and communication system that operates over an insecure communication channel. The system uses transformations of signals to generate secure cipher keys that are infeasible to invert or generate without proper inputs. This method ensures secure communication by encrypting and decrypting messages using the generated keys. Here's a breakdown of the claims:
 
@@ -326,7 +326,7 @@ To represent the Diffie-Hellman key exchange mechanism into mathematical notatio
 
 ----
 
-# RSA - Encryption Algorithm
+# RSA - Key Exchange Algorithm
 
 Overview of Cryptographic Communications Systems and Methods
 
