@@ -192,6 +192,23 @@ $$\[
 
 By combining these operations in a secure and well-designed algorithm, it's possible to create an encryption scheme that protects sensitive information from unauthorized access.
 
+
+Here's a key of the symbols used in the Markdown table, with LaTeX notation properly escaped using the dollar sign delimiter:
+
+| Symbol                  | Meaning                                                  |
+|-------------------------|----------------------------------------------------------|
+| $\alpha$                | Plaintext                                                |
+| $\beta$                 | Secret key                                               |
+| $\phi$                  | Ciphertext                                               |
+| $\Psi$                  | Encryption function                                      |
+| $\Phi_{\beta}$          | Key transformation function                              |
+| $\Gamma$                | Intermediate value in encryption process                 |
+| $\oplus$                | XOR (Exclusive OR) operation                             |
+| $\text{Γ}$               | Shifted plaintext                                        |
+| $\Phi_{\beta}^{-1}$     | Inverse of key transformation function                   |
+
+This key provides an explanation of each symbol used in the encryption and decryption processes described in the Markdown content.
+
 ----
 
 
