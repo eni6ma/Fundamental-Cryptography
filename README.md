@@ -127,19 +127,20 @@ In essence, while AES-Rijndael, RSA, and Diffie-Hellman each have distinct appli
 
 2. **Key Generation Function:**
    - Generate cryptographic keys using $\Lambda$, incorporating initial inputs $\alpha$, $\beta$ and, if available, large prime or composite numbers $\eta$, $\xi$.
-     $$\Lambda(\alpha, \beta, \eta, \xi) \rightarrow \text{keys}$$
+     $$\Lambda(\alpha, \beta, \eta, \xi) \rightarrow keys$$
 
 3. **Encryption Function:**
    - Encrypt plaintext $M$ using the encryption function $\Omega$ with the generated keys to produce ciphertext $C$.
-     $$\Omega(M, \text{keys}) \rightarrow C$$
+     $$\Omega(M, keys) \rightarrow C$$
 
 4. **Decryption Function:**
    - Decrypt ciphertext $C$ back to plaintext $M$ using the decryption function $\Theta$ with the same keys.
-     $$\Theta(C, \text{keys}) \rightarrow M$$
+     $$\Theta(C, keys) \rightarrow M$$
 
 5. **Generation of Pseudo-random Values:**
    - Generate pseudo-random values or sequences using $\Gamma$ to enhance security measures or for use in encryption/decryption processes.
-     $$\Gamma() \rightarrow \text{random\_value}$$
+     $$\Gamma() \rightarrow \text{random value}$$
+
 
 
 ### Key of Greek Symbols and Mathematical Notation
