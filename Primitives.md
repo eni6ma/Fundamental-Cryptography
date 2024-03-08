@@ -26,6 +26,28 @@ These mathematical concepts form the basis of many cryptographic algorithms and 
 
 This is illustration of how Coprime (Relatively Prime), XOR (Exclusive OR), and the Modulus Operation can be used in a generic cryptography algorithm:
 
+Here's the key of functions and variables used in the cryptography algorithm, presented as a LaTeX table for GitHub Markdown:
+
+
+| Symbol            | Description                                       |
+|-------------------|---------------------------------------------------|
+| $p, q$            | Large prime numbers                               |
+| $n$               | Modulus computed by multiplying $p$ and $q$      |
+| $e$               | Public exponent                                   |
+| $d$               | Private exponent                                  |
+| $M$               | Plaintext message                                 |
+| $C$               | Ciphertext                                        |
+| $H$               | Cryptographic hash                               |
+| $S$               | Signature                                         |
+| $K$               | One-time pad                                      |
+| $r$               | Random number                                     |
+| $v$               | Pseudorandom value                                |
+| $M'$              | Received plaintext message                        |
+| $S'$              | Received signature                                |
+| $H'$              | Hash computed from the received message           |
+
+
+This table provides a clear reference for the symbols used in the cryptography algorithm described earlier. Each symbol is accompanied by a brief description of its role in the algorithm.
 
 ## Generic Cryptography Algorithm
 
