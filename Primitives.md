@@ -26,7 +26,7 @@ These mathematical concepts form the basis of many cryptographic algorithms and 
 
 This is illustration of how Coprime (Relatively Prime), XOR (Exclusive OR), and the Modulus Operation can be used in a generic cryptography algorithm:
 
-```markdown
+
 ## Generic Cryptography Algorithm
 
 1. **Key Generation**:
@@ -61,6 +61,6 @@ This is illustration of how Coprime (Relatively Prime), XOR (Exclusive OR), and 
    - Verify the signature $S$ using the public key: $H' \equiv S^e \mod n$, where $H'$ is the hash computed from the received message.
 
 These examples demonstrate how Coprime (Relatively Prime), XOR (Exclusive OR), and the Modulus Operation play essential roles in various aspects of cryptography, including key generation, encryption, decryption, data integrity, randomness generation, secure communication, and digital signatures.
-```
+
 
 This markdown illustrates the use of these mathematical concepts in a generic cryptography algorithm.
