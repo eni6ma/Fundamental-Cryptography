@@ -97,6 +97,8 @@ This sequence diagram illustrates Schnorr's Sigma algorithm. The Prover generate
 
 ----
 
+My apologies for the error. Let me correct that for you:
+
 ```mermaid
 graph TD
     subgraph Prover
@@ -108,8 +110,8 @@ graph TD
     subgraph Verifier
         E[Send commitment to s]
         F[Verify commitment]
-        G[Send response]
-        H[Verify response]
+        G[Send challenge]
+        H[Verify response: s == commitment - r * challenge]
     end
     A --> B
     B --> E
@@ -121,7 +123,7 @@ graph TD
     H -->|Acceptance or rejection of proof| D
 ``` 
 
-This mermaid diagram illustrates a basic Zero-Knowledge Proof (ZKP) algorithm, including the commitment stage. The Prover first selects a secret value and computes a commitment to it. This commitment is then sent to the Verifier, who verifies it. After verification, the Prover generates a response based on a challenge from the Verifier and sends it back. Finally, the Verifier verifies the response and either accepts or rejects the proof.
+This   diagram illustrates a basic Zero-Knowledge Proof (ZKP) algorithm, including the commitment stage. The Prover first selects a secret value and computes a commitment to it. This commitment is then sent to the Verifier, who verifies it. The Verifier then sends a challenge back to the Prover. After receiving the challenge, the Prover computes a response based on it and sends it back to the Verifier. Finally, the Verifier verifies the response and either accepts or rejects the proof.
 
 ```mermaid
 sequenceDiagram
