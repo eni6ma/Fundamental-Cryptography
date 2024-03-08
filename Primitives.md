@@ -102,7 +102,8 @@ An example of the use of SBOX Shift, Rotate, and Log in a generic cryptography a
 
 In many cryptography algorithms, SBOX operations play a crucial role in nonlinear transformations and substitution processes. Three common operations used within SBOX are:
 
-1. **Shift**: This operation involves shifting the bits of a binary number by a certain number of positions to the left or right.
+## 1. **Shift**: 
+This operation involves shifting the bits of a binary number by a certain number of positions to the left or right.
 
    Mathematically, the shift operation can be represented as follows:
    
@@ -116,7 +117,8 @@ $$
 
    Here, $x$ represents the binary input, and $k$ denotes the number of positions to shift.
 
-3. **Rotate**: Rotation involves circularly shifting the bits of a binary number to the left or right.
+## 2. **Rotate**: 
+Rotation involves circularly shifting the bits of a binary number to the left or right.
 
    The rotation operation can be defined as follows:
    
@@ -130,7 +132,8 @@ $$
 
    Here, $n$ represents the total number of bits in the binary number.
 
-4. **Logarithm**: In cryptographic algorithms, logarithmic operations are often used to compute discrete logarithms over finite fields.
+## 3. **Logarithm**: 
+In cryptographic algorithms, logarithmic operations are often used to compute discrete logarithms over finite fields.
 
    Mathematically, the logarithm operation can be expressed as:
    
