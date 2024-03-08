@@ -109,29 +109,36 @@ In many cryptography algorithms, SBOX operations play a crucial role in nonlinea
 1. **Shift**: This operation involves shifting the bits of a binary number by a certain number of positions to the left or right.
 
    Mathematically, the shift operation can be represented as follows:
-   $$\text{Shift}_k(x) = \begin{cases} 
+   $$
+   \text{Shift}_k(x) = \begin{cases} 
    x << k & \text{if shifting left} \\
    x >> k & \text{if shifting right}
-   \end{cases}$$
+   \end{cases}
+   $$
 
    Here, $x$ represents the binary input, and $k$ denotes the number of positions to shift.
 
 2. **Rotate**: Rotation involves circularly shifting the bits of a binary number to the left or right.
 
    The rotation operation can be defined as follows:
-   $$\text{Rotate}_k(x) = \begin{cases} 
+   $$
+   \text{Rotate}_k(x) = \begin{cases} 
    (x << k) \,|\, (x >> (n - k)) & \text{if rotating left} \\
    (x >> k) \,|\, (x << (n - k)) & \text{if rotating right}
-   \end{cases}$$
+   \end{cases}
+   $$
 
    Here, $n$ represents the total number of bits in the binary number.
 
 3. **Logarithm**: In cryptographic algorithms, logarithmic operations are often used to compute discrete logarithms over finite fields.
 
    Mathematically, the logarithm operation can be expressed as:
-   $$\log_b(a) = c$$
+   $$
+   \log_b(a) = c
+   $$
 
    Here, $a$ is the base, $b$ is the exponent, and $c$ is the result.
+
 
 These operations are fundamental in many cryptographic algorithms for achieving confusion and diffusion, enhancing security and preventing attacks.
 
