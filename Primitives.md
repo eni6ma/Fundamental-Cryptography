@@ -153,7 +153,7 @@ This markdown provides an explanation of how SBOX Shift, Rotate, and Log operati
 
 
 ----
-
+# Encrypt & Decrypt 
 
 Encrypting and decrypting using a combination of shift, XOR, and logarithmic operations involves manipulating the plaintext data in a specific manner to ensure confidentiality and integrity. Here's how these operations can be applied:
 
