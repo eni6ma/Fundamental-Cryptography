@@ -1,3 +1,4 @@
+```mermaid
 flowchart TD
     subgraph "Claim 1: Key Generation Improvement"
         subgraph "Context"
@@ -77,3 +78,4 @@ flowchart TD
         c18 --> c19
         c19 --> c20
     end
+```
