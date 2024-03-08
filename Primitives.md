@@ -124,10 +124,13 @@ $$
 
    The rotation operation can be defined as follows:
    
-   $$   \text{Rotate}_k(x) = \begin{cases} 
-   (x << k) \,|\, (x >> (n - k)) & \text{if rotating left} \\
-   (x >> k) \,|\, (x << (n - k)) & \text{if rotating right}
-   \end{cases}   $$
+$$
+\text{Rotate}_k(x) = \begin{cases} 
+(x << k) \,|\, (x >> (n - k)) & \text{if rotating left} \\
+(x >> k) \,|\, (x << (n - k)) & \text{if rotating right}
+\end{cases}
+$$
+
 
    Here, $n$ represents the total number of bits in the binary number.
 
@@ -135,7 +138,10 @@ $$
 
    Mathematically, the logarithm operation can be expressed as:
    
-   $$   \log_b(a) = c   $$
+$$
+\log_b(a) = c
+$$
+
 
    Here, $a$ is the base, $b$ is the exponent, and $c$ is the result.
 
