@@ -22,6 +22,46 @@
 | 4    | Encryption/Decryption    | Apply $\Omega$ for encryption and $\Theta$ for decryption using generated keys. |
 | 5    | Pseudo-random Operations | Utilize $\Gamma$ for operations requiring pseudo-randomness or additional security measures. |
 
+
+The claims related to cryptographic key generation and encryption mechanisms, specifically in the context of the Advanced Encryption Standard (AES)—Rijndael block cipher algorithm. Here's a breakdown of these claims into a more structured format for clarity:
+
+## Claim 1: Key Generation Improvement
+- **Context**: In a key generator for AES—Rijndael algorithm.
+- **Objective**: Generate round-key words "on-the-fly" in reverse direction for decryption.
+- **Method Steps**:
+  1. **Provide memory** for storing a final set of $N_k$ round-key words.
+  2. **Perform key expansion** in a forward direction during encryption, storing the final $N_k$ words.
+  3. **Set key generator** for decryption.
+  4. **Derive preceding round-key words** "on-the-fly" using XOR logic, with specific conditions for transformations.
+- **Implementation**: As a hardware circuit with multiple S-boxes for S-box byte substitutions, featuring different power consumption signatures. A pseudo-random generator selects pathways to these S-boxes during key expansion.
+
+## Claim 2: Pseudo-random Generator Specification
+- **Relation**: Refers to the method of claim 1.
+- **Specification**: The pseudo-random generator is detailed as a linear feedback shift register with n-bit output, coupled with a look-up table for pathway selection control signals.
+
+## Claim 3: Differential Power Analysis Countermeasure
+- **Context**: In a hardware block cipher circuit with a pre-mix XOR operation.
+- **Objective**: Introduce a countermeasure against differential power analysis.
+- **Implementation**: A dummy circuit with matched propagation delay to the pre-mix subcircuit, incorporating a pseudo-random generator and an XOR array, to insert pseudo-random noise into the power signature during the initial pre-mix XOR operation.
+
+## Claim 4: Pseudo-random Generator Detail for Claim 3
+- **Relation**: Refers to the circuit of claim 3.
+- **Specification**: The pseudo-random generator consists of linear feedback shift registers.
+
+## Claim 5: Word Width Matching
+- **Relation**: Refers to the circuit of claim 3.
+- **Specification**: The pseudo-random generator and XOR array of the dummy circuit match the word width in bits of the pre-mix subcircuit.
+
+## Claim 6: Pre-mix and Encryption Round Combination
+- **Context**: In a hardware block cipher circuit for a cipher algorithm.
+- **Objective**: Combine the pre-mix operation with the first cipher encryption round.
+- **Method Steps**:
+  1. **Pre-process the cipher key** for first cipher encryption round key words while loading plaintext.
+  2. **Execute the first cipher encryption round** on the pre-mixed plaintext with pre-generated first round-key words.
+
+Each claim specifies a novel aspect of the cryptographic process, focusing on efficiency, security (particularly against differential power analysis), and the practical implementation of these cryptographic methods in hardware. The structure of these claims reflects a typical approach in patent documentation to provide a clear definition of the inventive elements, their implementation details, and, in some cases, specific embodiments or applications of the invention.
+
+
 ----
 
 # AES : Cyptography Sequence
