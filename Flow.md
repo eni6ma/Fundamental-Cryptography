@@ -11,9 +11,10 @@ graph TD;
     D --> F((Circle));
 
     subgraph Mathematics
-        a[\\(x = \\frac{-b \\pm \\sqrt{b^2 - 4ac}}{2a}\\)] -- Example equation --> b[\\(E = mc^2\\)];
-        b -- Another example equation --> c[\\(F = \\int_a^b \\frac{1}{x} \\, dx\\)];
+        a["$x = \\frac{-b \\pm \\sqrt{b^2 - 4ac}}{2a}$" -- Example equation --> b["$E = mc^2$"];
+        b -- Another example equation --> c["$F = \\int_a^b \\frac{1}{x} \\, dx$"];
     end
+
 ```
 
 In this flowchart, the Mathematics subgraph contains nodes with embedded math equations.
