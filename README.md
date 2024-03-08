@@ -58,24 +58,6 @@ Despite the unique functionalities and applications distinguishing AES-Rijndael,
 5. **Pseudo-random Operations**
    - $random\_value = \Gamma()$
 
-**Explicit Equations in Math Notation:**
-
-- **Initial Transformation:**
-  - $\Phi(\alpha) \rightarrow \gamma$
-  - $\Phi(\beta) \rightarrow \delta$
-
-- **Key Generation Function:**
-  - $\Lambda(\alpha, \beta, \eta, \xi) \rightarrow keys$
-
-- **Encryption Function:**
-  - $\Omega(M, keys) \rightarrow C$
-
-- **Decryption Function:**
-  - $\Theta(C, keys) \rightarrow M$
-
-- **Generation of Pseudo-random Values:**
-  - $\Gamma() \rightarrow random\_value$
-
 ### Claims 
 
 #### Claim 1: Key Generation Improvement
@@ -135,6 +117,24 @@ The cryptographic methods AES-Rijndael, RSA, and Diffie-Hellman, while each uniq
 5. **Pseudo-Random Operations**: The introduction of pseudo-random operations via the function $\Gamma$ adds an additional layer of security. This complexity and unpredictability help thwart pattern recognition and other analytical attacks, further enhancing the cryptographic algorithms' resilience.
 
 In essence, while AES-Rijndael, RSA, and Diffie-Hellman each have distinct applications and mechanisms, their shared reliance on initial input processing, key generation transformations, and encryption/decryption principles highlight a unified foundation in mathematical rigor and computational complexity. Prime number theory and modular arithmetic serve as the backbone of these cryptographic standards, ensuring data integrity and security across various digital communication platforms.
+
+**Explicit Equations in Math Notation:**
+
+- **Initial Transformation:**
+  - $\Phi(\alpha) \rightarrow \gamma$
+  - $\Phi(\beta) \rightarrow \delta$
+
+- **Key Generation Function:**
+  - $\Lambda(\alpha, \beta, \eta, \xi) \rightarrow keys$
+
+- **Encryption Function:**
+  - $\Omega(M, keys) \rightarrow C$
+
+- **Decryption Function:**
+  - $\Theta(C, keys) \rightarrow M$
+
+- **Generation of Pseudo-random Values:**
+  - $\Gamma() \rightarrow random\_value$
 
 ### Key of Greek Symbols and Mathematical Notation
 - $\alpha, \beta$: Input variables, representing initial values or keys.
