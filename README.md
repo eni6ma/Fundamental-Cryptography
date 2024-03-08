@@ -42,42 +42,42 @@ While AES-Rijndael, RSA, and Diffie-Hellman have unique mechanisms and applicati
 Pseudo Code Algorithm Sequence:
 
 1. Initialize Variables
-   $\alpha, \beta$
+   $$\alpha, \beta$$
 
 2. Initial Transformations
-   $\gamma = \Phi(\alpha)$
-   $\delta = \Phi(\beta)$
+   $$\gamma = \Phi(\alpha)$$
+   $$\delta = \Phi(\beta)$$
 
 3. Key Generation
-   if $\eta$ and $\xi$ are provided:
-       $keys = \Lambda(\alpha, \beta, \eta, \xi)$
+   if $$\eta$$ and $$\xi$$ are provided:
+       $$\text{keys} = \Lambda(\alpha, \beta, \eta, \xi)$$
    else:
-       $keys = \Lambda(\alpha, \beta)$
+       $$\text{keys} = \Lambda(\alpha, \beta)$$
 
 4. Encryption/Decryption
-   $C = \Omega(M, keys)$
-   $M = \Theta(C, keys)$
+   $$C = \Omega(M, \text{keys})$$
+   $$M = \Theta(C, \text{keys})$$
 
 5. Pseudo-random Operations
-   $random\_value = \Gamma()$
+   $$\text{random\_value} = \Gamma()$$
 
 Explicit Equations in Math Notation:
 
 - For the Initial Transformation:
-  $\Phi(\alpha) \rightarrow \gamma$
-  $\Phi(\beta) \rightarrow \delta$
+  $$\Phi(\alpha) \rightarrow \gamma$$
+  $$\Phi(\beta) \rightarrow \delta$$
 
 - For the Key Generation Function:
-  $\Lambda(\alpha, \beta, \eta, \xi) \rightarrow keys$
+  $$\Lambda(\alpha, \beta, \eta, \xi) \rightarrow \text{keys}$$
 
 - For the Encryption Function:
-  $\Omega(M, keys) \rightarrow C$
+  $$\Omega(M, \text{keys}) \rightarrow C$$
 
 - For the Decryption Function:
-  $\Theta(C, keys) \rightarrow M$
+  $$\Theta(C, \text{keys}) \rightarrow M$$
 
 - For the Generation of Pseudo-random Values or Sequences:
-  $\Gamma() \rightarrow random\_value$
+  $$\Gamma() \rightarrow \text{random\_value}$$
 
 
 ## Claim 1: Key Generation Improvement
