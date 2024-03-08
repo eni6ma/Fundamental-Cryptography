@@ -61,7 +61,7 @@ Pseudo Code Algorithm Sequence:
 5. Pseudo-random Operations
    $random\_value = \Gamma()$
 
-Explicit Equations in LaTeX:
+Explicit Equations in Math Notation:
 
 - For the Initial Transformation:
   $\Phi(\alpha) \rightarrow \gamma$
