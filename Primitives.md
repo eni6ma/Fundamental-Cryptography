@@ -185,15 +185,12 @@ $$
 
 Mathematically, the decryption process can be represented as:
 
-
 $$\[
 \alpha = (\Psi \oplus \phi) \cdot \Phi_{\beta}^{-1}(\Phi_{\beta}(\alpha))
 \]$$
 
 By combining these operations in a secure and well-designed algorithm, it's possible to create an encryption scheme that protects sensitive information from unauthorized access.
 
-
-Here's a key of the symbols used in the Markdown table, with LaTeX notation properly escaped using the dollar sign delimiter:
 
 | Symbol                  | Meaning                                                  |
 |-------------------------|----------------------------------------------------------|
@@ -207,7 +204,6 @@ Here's a key of the symbols used in the Markdown table, with LaTeX notation prop
 | $\text{Γ}$               | Shifted plaintext                                        |
 | $\Phi_{\beta}^{-1}$     | Inverse of key transformation function                   |
 
-This key provides an explanation of each symbol used in the encryption and decryption processes described in the Markdown content.
 
 ----
 
