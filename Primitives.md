@@ -31,9 +31,10 @@ In modular arithmetic, the modulus operation calculates the remainder when one i
 
 These mathematical concepts form the basis of many cryptographic algorithms and are crucial for ensuring the security and integrity of encrypted data.
 
-
 This is illustration of how Coprime (Relatively Prime), XOR (Exclusive OR), and the Modulus Operation can be used in a generic cryptography algorithm:
 
+
+## Math Notation Key
 Here's the key of functions and variables used in the cryptography algorithm, presented as a LaTeX table for GitHub Markdown:
 
 
@@ -92,14 +93,9 @@ This table provides a clear reference for the symbols used in the cryptography a
 
 These examples demonstrate how Coprime (Relatively Prime), XOR (Exclusive OR), and the Modulus Operation play essential roles in various aspects of cryptography, including key generation, encryption, decryption, data integrity, randomness generation, secure communication, and digital signatures.
 
-
-This markdown illustrates the use of these mathematical concepts in a generic cryptography algorithm.
-
-
 ----
 
-
-An example of the use of SBOX Shift, Rotate, and Log in a generic cryptography algorithm, presented in Markdown with LaTeX equations:
+An example of the use of SBOX Shift, Rotate, and Log in a generic cryptography algorithm:
 
 
 ### SBOX Shift, Rotate, and Log in Cryptography
