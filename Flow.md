@@ -77,6 +77,37 @@ This sequence diagram illustrates the RSA key exchange algorithm. Alice generate
 
 ----
 
+The  diagram depicting a basic Sigma Schnorr ceremony algorithm, including the commitment stage:
+
+```mermaid
+graph TD
+    subgraph Prover
+        A[Choose random value k]
+        B[Compute commitment to k]
+        C[Compute challenge: H(message || commitment)]
+        D[Compute response: s = k + c * x]
+    end
+    subgraph Verifier
+        E[Send commitment to k]
+        F[Verify commitment]
+        G[Send challenge]
+        H[Verify challenge]
+        I[Send response]
+        J[Verify response]
+    end
+    A --> B
+    B --> E
+    E --> F
+    F -->|Acceptance or rejection of commitment| C
+    C --> G
+    G --> H
+    H --> I
+    I --> J
+    J -->|Acceptance or rejection of proof| D
+    D -->|Repeat with new k if rejected| A
+``` 
+
+This diagram illustrates the Sigma Schnorr ceremony algorithm. The Prover first selects a random value \( k \) and computes a commitment to it. Then, the Prover and Verifier interact to verify the commitment, generate a challenge based on the message and commitment, and respond accordingly. The Verifier ultimately verifies the response and either accepts or rejects the proof. If rejected, the Prover repeats the process with a new random value \( k \).
 
 ```mermaid
 sequenceDiagram
