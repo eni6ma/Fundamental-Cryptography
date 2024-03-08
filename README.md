@@ -118,23 +118,29 @@ The cryptographic methods AES-Rijndael, RSA, and Diffie-Hellman, while each uniq
 
 In essence, while AES-Rijndael, RSA, and Diffie-Hellman each have distinct applications and mechanisms, their shared reliance on initial input processing, key generation transformations, and encryption/decryption principles highlight a unified foundation in mathematical rigor and computational complexity. Prime number theory and modular arithmetic serve as the backbone of these cryptographic standards, ensuring data integrity and security across various digital communication platforms.
 
-**Explicit Equations in Math Notation:**
+**Explicit Equations in Math Notation Sequence Flow:**
 
-- **Initial Transformation:**
-  - $\Phi(\alpha) \rightarrow \gamma$
-  - $\Phi(\beta) \rightarrow \delta$
+1. **Initial Transformation:**
+   - Apply $\Phi$ to input variables $\alpha$ and $\beta$ to produce intermediate values $\gamma$ and $\delta$.
+     $$\Phi(\alpha) \rightarrow \gamma$$
+     $$\Phi(\beta) \rightarrow \delta$$
 
-- **Key Generation Function:**
-  - $\Lambda(\alpha, \beta, \eta, \xi) \rightarrow keys$
+2. **Key Generation Function:**
+   - Generate cryptographic keys using $\Lambda$, incorporating initial inputs $\alpha$, $\beta$ and, if available, large prime or composite numbers $\eta$, $\xi$.
+     $$\Lambda(\alpha, \beta, \eta, \xi) \rightarrow \text{keys}$$
 
-- **Encryption Function:**
-  - $\Omega(M, keys) \rightarrow C$
+3. **Encryption Function:**
+   - Encrypt plaintext $M$ using the encryption function $\Omega$ with the generated keys to produce ciphertext $C$.
+     $$\Omega(M, \text{keys}) \rightarrow C$$
 
-- **Decryption Function:**
-  - $\Theta(C, keys) \rightarrow M$
+4. **Decryption Function:**
+   - Decrypt ciphertext $C$ back to plaintext $M$ using the decryption function $\Theta$ with the same keys.
+     $$\Theta(C, \text{keys}) \rightarrow M$$
 
-- **Generation of Pseudo-random Values:**
-  - $\Gamma() \rightarrow random\_value$
+5. **Generation of Pseudo-random Values:**
+   - Generate pseudo-random values or sequences using $\Gamma$ to enhance security measures or for use in encryption/decryption processes.
+     $$\Gamma() \rightarrow \text{random\_value}$$
+
 
 ### Key of Greek Symbols and Mathematical Notation
 - $\alpha, \beta$: Input variables, representing initial values or keys.
