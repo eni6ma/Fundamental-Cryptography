@@ -65,6 +65,46 @@ Each claim specifies a novel aspect of the cryptographic process, focusing on ef
 ----
 
 # AES : Cyptography Sequence
+
+The claims related to cryptographic key generation and encryption mechanisms, specifically in the context of the Advanced Encryption Standard (AES)—Rijndael block cipher algorithm. Here's a breakdown of these claims into a more structured format for clarity:
+
+## Claim 1: Key Generation Improvement
+- **Context**: In a key generator for AES—Rijndael algorithm.
+- **Objective**: Generate round-key words "on-the-fly" in reverse direction for decryption.
+- **Method Steps**:
+  1. **Provide memory** for storing a final set of $N_k$ round-key words.
+  2. **Perform key expansion** in a forward direction during encryption, storing the final $N_k$ words.
+  3. **Set key generator** for decryption.
+  4. **Derive preceding round-key words** "on-the-fly" using XOR logic, with specific conditions for transformations.
+- **Implementation**: As a hardware circuit with multiple S-boxes for S-box byte substitutions, featuring different power consumption signatures. A pseudo-random generator selects pathways to these S-boxes during key expansion.
+
+## Claim 2: Pseudo-random Generator Specification
+- **Relation**: Refers to the method of claim 1.
+- **Specification**: The pseudo-random generator is detailed as a linear feedback shift register with n-bit output, coupled with a look-up table for pathway selection control signals.
+
+## Claim 3: Differential Power Analysis Countermeasure
+- **Context**: In a hardware block cipher circuit with a pre-mix XOR operation.
+- **Objective**: Introduce a countermeasure against differential power analysis.
+- **Implementation**: A dummy circuit with matched propagation delay to the pre-mix subcircuit, incorporating a pseudo-random generator and an XOR array, to insert pseudo-random noise into the power signature during the initial pre-mix XOR operation.
+
+## Claim 4: Pseudo-random Generator Detail for Claim 3
+- **Relation**: Refers to the circuit of claim 3.
+- **Specification**: The pseudo-random generator consists of linear feedback shift registers.
+
+## Claim 5: Word Width Matching
+- **Relation**: Refers to the circuit of claim 3.
+- **Specification**: The pseudo-random generator and XOR array of the dummy circuit match the word width in bits of the pre-mix subcircuit.
+
+## Claim 6: Pre-mix and Encryption Round Combination
+- **Context**: In a hardware block cipher circuit for a cipher algorithm.
+- **Objective**: Combine the pre-mix operation with the first cipher encryption round.
+- **Method Steps**:
+  1. **Pre-process the cipher key** for first cipher encryption round key words while loading plaintext.
+  2. **Execute the first cipher encryption round** on the pre-mixed plaintext with pre-generated first round-key words.
+
+Each claim specifies a novel aspect of the cryptographic process, focusing on efficiency, security (particularly against differential power analysis), and the practical implementation of these cryptographic methods in hardware. The structure of these claims reflects a typical approach in patent documentation to provide a clear definition of the inventive elements, their implementation details, and, in some cases, specific embodiments or applications of the invention.
+
+
 ## Key of Greek Symbols and Mathematical Notation
 
 - $\Lambda$: Function representing the key expansion routine.
@@ -96,6 +136,9 @@ Each claim specifies a novel aspect of the cryptographic process, focusing on ef
 ----
 
 # Diffie Hellman - Encryption
+
+
+
 ## Key of Greek Symbols and Mathematical Notation
 
 - $\Sigma$: Function for generating signals or performing transformations.
@@ -122,6 +165,90 @@ Each claim specifies a novel aspect of the cryptographic process, focusing on ef
 ----
 
 # RSA - Encryption Algorithm
+
+Overview of Cryptographic Communications Systems and Methods
+
+The claims broadly cover systems and methods for secure cryptographic communication between terminals or within a communications system. They involve encoding (encrypting) and decoding (decrypting) message signals using specific mathematical operations based on prime numbers, composite numbers, and modular arithmetic, which are foundational to cryptography.
+
+## System Components and Operations
+
+1. **Cryptographic System Configuration**:
+   - Communications channel.
+   - Encoding and decoding mechanisms.
+   - Use of composite numbers $n = p \cdot q$, where $p$ and $q$ are prime numbers for encryption keys.
+   - Encryption and decryption transformations based on modular exponentiation.
+
+2. **Encoding and Decoding Processes**:
+   - Transformation of message signals into encrypted or decrypted forms using keys characterized by specific mathematical properties (e.g., relatively prime numbers, multiplicative inverses).
+   - Implementation of encoding and decoding steps via hardware components, such as registers and modular multiplication networks.
+
+3. **Key Generation and Management**:
+   - Methods for generating and using encoding and decoding keys.
+   - Procedures for managing keys across multiple terminals within a communication system.
+
+4. **Security Enhancements and Countermeasures**:
+   - Introduction of pseudo-random noise and other mechanisms to counter differential power analysis attacks.
+   - Utilization of multiple, diverse hardware implementations to obscure power consumption patterns.
+
+5. **Detailed Implementations**:
+   - Specific descriptions of hardware components and their interconnections for performing cryptographic operations.
+   - Use of exponentiation by repeated squaring and multiplication for efficient encryption and decryption.
+
+## Key Mathematical Principles
+
+- Modular arithmetic operations form the basis of encryption and decryption methods, utilizing properties of prime numbers and their relationships.
+- The system relies on the difficulty of factoring large composite numbers $(n = p \cdot q)$ and the mathematical properties of modular exponentiation for security.
+- Encryption and decryption transformations are defined by equations involving modular exponentiation, where encryption keys $(e)$ and decryption keys $(d)$ have specific relationships to ensure reversibility of the process.
+
+## Security and Efficiency
+
+- The claims outline methods to enhance the security and efficiency of cryptographic communications, including the use of pseudo-random generators and specific hardware configurations to thwart side-channel attacks.
+- Emphasis on modular arithmetic and exponentiation by repeated squaring and multiplication underscores the focus on efficient and secure cryptographic operations.
+
+## Summary
+
+The described claims in the text detail a comprehensive approach to securing communications through cryptographic systems, utilizing advanced mathematical operations, hardware implementations, and security measures. They encompass a broad range of technologies and methods integral to modern cryptography, highlighting the importance of secure key management, efficient encryption and decryption processes, and countermeasures against potential security threats.
+
+To mathematically represent the RSA cryptographic communications systems and methods as described in the patent claims, we will express the encryption and decryption processes, key generation, and secure communication protocol. This structured mathematical representation will provide clarity on the algorithm's sequence and its components.
+
+## Key of Greek Symbols and Mathematical Notation
+
+- $n$: Composite number, $n = p \cdot q$ where $p$ and $q$ are prime numbers.
+- $e$: Public exponent, relatively prime to $(p-1) \cdot (q-1)$.
+- $d$: Private exponent, multiplicative inverse of $e \mod \lambda(n)$, where $\lambda$ is Carmichael's totient function.
+- $M$: Plaintext message.
+- $C$: Ciphertext message.
+- $E$: Encryption function.
+- $D$: Decryption function.
+- $\Phi$: General transformation or function.
+- $K$: Secure cipher key.
+
+## Algorithmic Sequence in Table Format
+
+| Step | Process         | Mathematical Representation                         |
+|------|-----------------|-----------------------------------------------------|
+| 1    | Key Generation  | $\Phi_{KeyGen}(p, q) \to (n, e, d)$                 |
+| 2    | Encryption      | $E(M, e, n) = M^e \mod n \to C$                     |
+| 3    | Decryption      | $D(C, d, n) = C^d \mod n \to M$                     |
+| 4    | Secure Communication | $E(M) \to C \to D(C) \to M$                   |
+| 5    | Key Exchange    | $K_{ij} = Y_i^{x_j} \mod q$                         |
+
+## Process Description
+
+1. **Key Generation**: Generate two large prime numbers $p$ and $q$. Calculate $n = p \cdot q$ and $\lambda(n)$, where $\lambda$ is the least common multiple of $p-1$ and $q-1$. Choose $e$ such that $1 < e < \lambda(n)$ and $e$ is coprime to $\lambda(n)$. Determine $d$ as the multiplicative inverse of $e \mod \lambda(n)$.
+
+2. **Encryption**: Using the public key $(n, e)$, the plaintext message $M$ is encrypted to produce ciphertext $C$ using $C = M^e \mod n$.
+
+3. **Decryption**: With the private key $(n, d)$, the ciphertext $C$ is decrypted back to the original message $M$ using $M = C^d \mod n$.
+
+4. **Secure Communication**: A message $M$ is securely transmitted by encrypting it into $C$ using the sender's encryption function, transmitted over an insecure channel, and then decrypted back into $M$ using the receiver's decryption function.
+
+5. **Key Exchange**: The secure key $K_{ij}$ for communication is established between two parties by exponentiating a shared base $a$ to their respective private values $x_i$ and $x_j$, and exchanging the resulting values $Y_i$ and $Y_j$ over a public channel. Each party then raises the received value to their private exponent to compute the shared secret key $K_{ij}$.
+
+This representation outlines the mathematical foundation of the RSA encryption and decryption process, highlighting the algorithm's reliance on prime numbers, modular arithmetic, and the infeasibility of factoring large composite numbers for security.
+
+----
+
 ## Key of Greek Symbols and Mathematical Notation
 
 - $n$: Composite number, $n = p \cdot q$ where $p$ and $q$ are prime numbers.
