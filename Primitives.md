@@ -23,7 +23,7 @@ XOR is a binary operation that outputs true (1) only when the number of true inp
 In modular arithmetic, the modulus operation calculates the remainder when one integer is divided by another. In cryptography, the modulus operation is fundamental in asymmetric encryption algorithms like RSA, where large prime numbers are used to generate keys.
 
    Mathematically, the modulus operation is represented using the symbol $\%$, and it is defined as:
-   $$a \mod n = r$$
+   $a \mod n = r$
 
    This means that when $a$ is divided by $n$, the remainder $r$ is the result.
 
