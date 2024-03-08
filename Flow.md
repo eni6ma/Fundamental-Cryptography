@@ -1,4 +1,41 @@
 
+Here's the Mermaid diagram for the secret commitment ceremony algorithm including Alice, Bob, and Victor stages:
+
+```mermaid
+graph TD
+    subgraph Alice
+        A[Choose secret value s]
+        B[Compute commitment to s]
+        C[Send commitment to Victor]
+    end
+    subgraph Bob
+        D[Choose secret value r]
+        E[Compute commitment to r]
+        F[Send commitment to Victor]
+    end
+    subgraph Victor
+        G[Receive commitments from Alice and Bob]
+        H[Send challenge to Alice and Bob]
+        I[Receive responses from Alice and Bob]
+        J[Verify responses and commitments]
+        K[Announce result]
+    end
+    A --> B
+    B --> C
+    D --> E
+    E --> F
+    C --> G
+    F --> G
+    G --> H
+    H --> I
+    I --> J
+    J --> K
+``` 
+
+This diagram illustrates the process of a secret commitment ceremony involving Alice, Bob, and Victor, including the stages of choosing secret values, computing commitments, sending commitments to Victor, Victor receiving commitments, sending challenges, receiving responses, verifying responses and commitments, and announcing the result.
+
+----
+
 ```mermaid
 sequenceDiagram
     participant User
