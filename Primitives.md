@@ -110,12 +110,13 @@ In many cryptography algorithms, SBOX operations play a crucial role in nonlinea
 
    Mathematically, the shift operation can be represented as follows:
    
-   $$
-   \text{Shift}_k(x) = \begin{cases} 
-   x << k & \text{if shifting left} \\
-   x >> k & \text{if shifting right}
-   \end{cases}
-   $$
+$$
+\text{Shift}_k(x) = \begin{cases} 
+x << k & \text{if shifting left} \\
+x >> k & \text{if shifting right} 
+\end{cases}
+$$
+
 
    Here, $x$ represents the binary input, and $k$ denotes the number of positions to shift.
 
