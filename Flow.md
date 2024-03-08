@@ -93,3 +93,26 @@ sequenceDiagram
 ```
 
 This sequence diagram illustrates Schnorr's Sigma algorithm. The Prover generates a random private key, computes the corresponding public key, and sends it to the Verifier. The Verifier then sends a challenge to the Prover. The Prover computes a response based on the challenge and sends it back to the Verifier. Finally, the Verifier verifies the response based on predefined criteria.
+
+
+----
+
+```mermaid
+sequenceDiagram
+    participant Prover
+    participant Verifier
+
+    Prover->>Prover: Choose secret value s
+    Prover->>Prover: Compute commitment to s: commit(s)
+    Prover->>Verifier: Send commitment to s
+    Verifier->>Verifier: Verify commitment
+    Verifier-->>Prover: Acceptance or rejection of commitment
+
+    Prover->>Prover: Choose random value r
+    Prover->>Prover: Compute response: response = s + r * challenge
+    Prover->>Verifier: Send response
+    Verifier->>Verifier: Verify response
+    Verifier-->>Prover: Acceptance or rejection of proof
+```
+
+This sequence diagram outlines a basic Zero-Knowledge Proof (ZKP) algorithm, including the commitment stage. The Prover selects a secret value and computes a commitment to it, which is sent to the Verifier. After verifying the commitment, the Verifier either accepts or rejects it. Then, the Prover generates a response based on a challenge from the Verifier, which is sent back for verification. Finally, the Verifier evaluates the response and either accepts or rejects the proof.
