@@ -207,6 +207,33 @@ By combining these operations in a secure and well-designed algorithm, it's poss
 
 ----
 
+This RUST code demonstrates an encryption and decryption process using a combination of shift, XOR, and logarithmic operations. Here's a breakdown of the code:
+
+1. **Main Function** (`main`):
+   - It defines plaintext (`alpha`), secret key (`beta`), and ciphertext (`phi`).
+   - It performs the encryption process by shifting the plaintext, XORing it with the key, and optionally applying a logarithmic operation.
+   - It then performs the decryption process by XORing the ciphertext with the key and shifting it back to its original state.
+   - Finally, it prints the encrypted and decrypted results.
+
+2. **Shift Function** (`shift_function`):
+   - It takes three parameters: the plaintext, the shift amount, and the direction (either "left" or "right").
+   - It implements the shift operation by cyclically shifting the characters of the plaintext to the left or right based on the specified shift amount and direction.
+   - It returns a string indicating the shifted plaintext along with the shift direction and amount.
+
+3. **XOR Function** (`xor_function`):
+   - It takes two parameters: the key and the data.
+   - It implements the XOR operation by performing an XOR operation between each corresponding character of the key and data.
+   - It returns a string representing the result of the XOR operation.
+
+4. **Logarithmic Function** (`logarithmic_function`):
+   - It takes two parameters: the data and the ciphertext.
+   - It implements an optional logarithmic operation by performing an XOR operation between each corresponding character of the data and ciphertext.
+   - It returns a string representing the result of the logarithmic operation.
+
+5. **Shift Inverse Function** (`shift_inverse_function`):
+   - It takes three parameters: the data, the shift amount, and the direction (either "left" or "right").
+   - It implements the inverse of the shift operation by cyclically shifting the characters of the data back to their original positions based on the specified shift amount and direction.
+   - It returns a string indicating the data after performing the shift inverse operation along with the shift direction and amount.
 
 ```rust
 fn main() {
