@@ -98,6 +98,32 @@ This sequence diagram illustrates Schnorr's Sigma algorithm. The Prover generate
 ----
 
 ```mermaid
+graph TD
+    subgraph Prover
+        A[Choose secret value s]
+        B[Compute commitment to s: commit(s)]
+        C[Choose random value r]
+        D[Compute response: response = s + r * challenge]
+    end
+    subgraph Verifier
+        E[Send commitment to s]
+        F[Verify commitment]
+        G[Send response]
+        H[Verify response]
+    end
+    A --> B
+    B --> E
+    E --> F
+    F -->|Acceptance or rejection of commitment| A
+    A --> C
+    C --> G
+    G --> H
+    H -->|Acceptance or rejection of proof| D
+``` 
+
+This mermaid diagram illustrates a basic Zero-Knowledge Proof (ZKP) algorithm, including the commitment stage. The Prover first selects a secret value and computes a commitment to it. This commitment is then sent to the Verifier, who verifies it. After verification, the Prover generates a response based on a challenge from the Verifier and sends it back. Finally, the Verifier verifies the response and either accepts or rejects the proof.
+
+```mermaid
 sequenceDiagram
     participant Prover
     participant Verifier
