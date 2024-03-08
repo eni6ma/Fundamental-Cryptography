@@ -205,8 +205,8 @@ By combining these operations in a secure and well-designed algorithm, it's poss
 | $\Phi_{\beta}^{-1}$     | Inverse of key transformation function                   |
 
 
-----
 
+# Example Rust Implementation 
 This RUST code demonstrates an encryption and decryption process using a combination of shift, XOR, and logarithmic operations. Here's a breakdown of the code:
 
 1. **Main Function** (`main`):
