@@ -1,6 +1,28 @@
 # Fundamental-Cryptography
 
-Certainly, here's the provided information converted into LaTeX for Markdown in GitHub, with each mathematical notation escaped with the dollar sign delimiter:
+# Primitive functions for Cryptographic systems
+## Key of Greek Symbols and Mathematical Notation
+
+- $\alpha, \beta$: Input variables, representing initial values or keys.
+- $\Phi$: General transformation or function, applicable in various contexts such as key expansion, encryption, or modular exponentiation.
+- $\Psi$: XOR logic operation or another binary operation used in transformations.
+- $\Lambda$: Function for key generation or the process of deriving new values in a cryptographically secure manner.
+- $\Omega$: Encryption function, transforming plaintext into ciphertext using keys and specific operations.
+- $\Theta$: Decryption function, the inverse of $\Omega$, recovering plaintext from ciphertext.
+- $\eta, \xi$: Large prime numbers or composite numbers, foundational to the security of cryptographic algorithms.
+- $\Gamma$: Function representing the generation or application of pseudo-random values or sequences.
+
+## Common Cryptographic Algorithm Sequence
+
+| Step | Process                  | Mathematical Representation              |
+|------|--------------------------|------------------------------------------|
+| 1    | Input Reception          | Receive $\alpha$ and $\beta$ as inputs.  |
+| 2    | Initial Transformation   | Apply $\Phi$ to $\alpha$ and $\beta$, generating intermediate values. |
+| 3    | Key Generation           | Use $\Lambda$ with inputs $\alpha$, $\beta$, and possibly $\eta$ or $\xi$ to generate keys. |
+| 4    | Encryption/Decryption    | Apply $\Omega$ for encryption and $\Theta$ for decryption using generated keys. |
+| 5    | Pseudo-random Operations | Utilize $\Gamma$ for operations requiring pseudo-randomness or additional security measures. |
+
+----
 
 # AES : Cyptography Sequence
 ## Key of Greek Symbols and Mathematical Notation
@@ -31,6 +53,7 @@ Certainly, here's the provided information converted into LaTeX for Markdown in 
 | 6    | Differential Power Analysis Countermeasure | Implement $\Sigma$ using a dummy circuit with pseudo-random noise for the initial $P$ operation. |
 | 7    | Pre-mix and Encryption Round Combination | Combine $P$ with the first $E$ round, applying pre-processed cipher key and pre-mixed plaintext. |
 
+----
 
 # Diffie Hellman - Encryption
 ## Key of Greek Symbols and Mathematical Notation
@@ -56,7 +79,7 @@ Certainly, here's the provided information converted into LaTeX for Markdown in 
 | 6    | Generation of Matching Secure Keys | Transmitter: $K_{ij} = Y_j^{x_i} \mod q$ Receiver: $K_{ji} = Y_i^{x_j} \mod q$ |
 | 7    | Authentication (Optional)      | Verify the ability to generate $K_{ij}$ or $K_{ji}$ as proof of identity. |
 
-
+----
 
 # RSA - Encryption Algorithm
 ## Key of Greek Symbols and Mathematical Notation
