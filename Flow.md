@@ -74,3 +74,22 @@ sequenceDiagram
 ```
 
 This sequence diagram illustrates the RSA key exchange algorithm. Alice generates two large prime numbers, calculates the public modulus (n), chooses a public exponent (e), and publishes these as her public key. Bob encrypts a message using Alice's public key and sends it to Alice. Alice decrypts the message using her private key.
+
+----
+
+
+```mermaid
+sequenceDiagram
+    participant Prover
+    participant Verifier
+
+    Prover->>Prover: Generate a random private key x
+    Prover->>Prover: Compute corresponding public key h = g^x mod p
+    Prover->>Verifier: Send public key h
+    Verifier->>Prover: Challenge c
+    Prover->>Prover: Compute response r = x + c * w mod q
+    Prover->>Verifier: Send response r
+    Verifier->>Verifier: Verify if g^r * h^c mod p equals v
+```
+
+This sequence diagram illustrates Schnorr's Sigma algorithm. The Prover generates a random private key, computes the corresponding public key, and sends it to the Verifier. The Verifier then sends a challenge to the Prover. The Prover computes a response based on the challenge and sends it back to the Verifier. Finally, the Verifier verifies the response based on predefined criteria.
