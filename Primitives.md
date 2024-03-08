@@ -186,12 +186,9 @@ $$
 Mathematically, the decryption process can be represented as:
 
 
-$$
-\[
+$$\[
 \alpha = (\Psi \oplus \phi) \cdot \Phi_{\beta}^{-1}(\Phi_{\beta}(\alpha))
-\]
-
-$$
+\]$$
 
 By combining these operations in a secure and well-designed algorithm, it's possible to create an encryption scheme that protects sensitive information from unauthorized access.
 
