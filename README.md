@@ -1,6 +1,17 @@
 # Fundamental-Cryptography
 
 # Primitive functions for Cryptographic systems
+
+The cryptographic algorithms AES-Rijndael, RSA, and Diffie-Hellman, while distinct in application and design, share common mathematical underpinnings that facilitate secure communication. Each of these systems begins with the reception of input values or keys, denoted as $\alpha$ and $\beta$. These initial values are crucial as they seed the subsequent transformations and encryptions. In particular, these inputs are subjected to an initial transformation $\Phi$, which may involve key expansion in AES, the generation of public keys in Diffie-Hellman, or modular arithmetic in RSA.
+
+Key generation is central to each of these algorithms and is represented by the function $\Lambda$. This function takes the initial inputs and possibly large prime or composite numbers, denoted as $\eta$ or $\xi$, to produce encryption and decryption keys. The RSA algorithm utilizes these prime numbers to establish a robust framework for secure key exchange, while Diffie-Hellman leverages them for creating a shared secret over an insecure channel. AES uses a similar process for generating a series of round keys for its block cipher operation. 
+
+The heart of these cryptographic systems is the encryption and decryption process, signified by the functions $\Omega$ and $\Theta$. Encryption transforms plaintext into unreadable ciphertext using generated keys, while decryption inverts this process, returning the ciphertext to its original plaintext form. These operations rely on complex mathematical computations like modular exponentiation, ensuring that without the correct keys, deciphering the encrypted information is computationally infeasible.
+
+Finally, an additional layer of security in cryptographic systems is introduced through pseudo-random operations, represented by the function $\Gamma$. These operations add complexity and unpredictability to the cryptographic process, thwarting attempts at pattern recognition, such as those used in differential power analysis. By incorporating pseudo-random values into the encryption process or using them in the generation of cryptographic keys, these algorithms enhance their resilience against various forms of cryptographic attacks.
+
+In summary, although AES-Rijndael, RSA, and Diffie-Hellman differ in their specific mechanisms and use cases, they share a reliance on initial value processing, complex transformations for key generation, and the fundamental principles of encryption and decryption. Each system utilizes mathematical rigor and computational complexity to achieve its security goals, with prime number theory and modular arithmetic forming the backbone of these cryptographic giants.
+
 ## Key of Greek Symbols and Mathematical Notation
 
 Pseudo Code Algorithm Sequence:
