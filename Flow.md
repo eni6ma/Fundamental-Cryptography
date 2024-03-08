@@ -56,3 +56,21 @@ sequenceDiagram
 ```
 
 This sequence diagram illustrates the Diffie-Hellman key exchange algorithm. Both Alice and Bob generate their private keys (a and b, respectively) and then exchange their public keys calculated using these private keys. The shared secret is then independently computed by each party using the other party's public key and their own private key.
+
+----
+
+```mermaid
+sequenceDiagram
+    participant Alice
+    participant Bob
+
+    Alice->>Bob: Generate two large prime numbers p and q
+    Alice->>Bob: Calculate n = p * q
+    Alice->>Bob: Choose e such that 1 < e < φ(n) and gcd(e, φ(n)) = 1
+    Alice->>Bob: Publish n and e as the public key
+    Bob->>Alice: Encrypt message M using Alice's public key (n, e)
+    Bob-->>Alice: Send the encrypted message C
+    Alice->>Bob: Decrypt the message C using her private key
+```
+
+This sequence diagram illustrates the RSA key exchange algorithm. Alice generates two large prime numbers, calculates the public modulus (n), chooses a public exponent (e), and publishes these as her public key. Bob encrypts a message using Alice's public key and sends it to Alice. Alice decrypts the message using her private key.
