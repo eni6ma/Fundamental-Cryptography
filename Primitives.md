@@ -94,3 +94,46 @@ These examples demonstrate how Coprime (Relatively Prime), XOR (Exclusive OR), a
 
 
 This markdown illustrates the use of these mathematical concepts in a generic cryptography algorithm.
+
+
+----
+
+
+An example of the use of SBOX Shift, Rotate, and Log in a generic cryptography algorithm, presented in Markdown with LaTeX equations:
+
+
+### SBOX Shift, Rotate, and Log in Cryptography
+
+In many cryptography algorithms, SBOX operations play a crucial role in nonlinear transformations and substitution processes. Three common operations used within SBOX are:
+
+1. **Shift**: This operation involves shifting the bits of a binary number by a certain number of positions to the left or right.
+
+   Mathematically, the shift operation can be represented as follows:
+   $$\text{Shift}_k(x) = \begin{cases} 
+   x << k & \text{if shifting left} \\
+   x >> k & \text{if shifting right}
+   \end{cases}$$
+
+   Here, $x$ represents the binary input, and $k$ denotes the number of positions to shift.
+
+2. **Rotate**: Rotation involves circularly shifting the bits of a binary number to the left or right.
+
+   The rotation operation can be defined as follows:
+   $$\text{Rotate}_k(x) = \begin{cases} 
+   (x << k) \,|\, (x >> (n - k)) & \text{if rotating left} \\
+   (x >> k) \,|\, (x << (n - k)) & \text{if rotating right}
+   \end{cases}$$
+
+   Here, $n$ represents the total number of bits in the binary number.
+
+3. **Logarithm**: In cryptographic algorithms, logarithmic operations are often used to compute discrete logarithms over finite fields.
+
+   Mathematically, the logarithm operation can be expressed as:
+   $$\log_b(a) = c$$
+
+   Here, $a$ is the base, $b$ is the exponent, and $c$ is the result.
+
+These operations are fundamental in many cryptographic algorithms for achieving confusion and diffusion, enhancing security and preventing attacks.
+
+
+This markdown provides an explanation of how SBOX Shift, Rotate, and Log operations are used in cryptography, along with their corresponding mathematical representations using LaTeX equations.
