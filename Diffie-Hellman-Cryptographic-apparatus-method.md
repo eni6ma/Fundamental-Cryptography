@@ -111,51 +111,51 @@ Here's how the pseudocode and corresponding equations would be formatted for Git
 ### Pseudocode and Corresponding Equations
 
 1. **SecureKeyGenerator(firstSignal, secondSignal)**
-   - `Input1 <- firstSignal`
-   - `Input2 <- secondSignal`
-   - `Output1 <- Transform(Input1)`
+   - Input1 <- firstSignal
+   - Input2 <- secondSignal
+   - Output1 <- Transform(Input1)
      - Equation: $Y_i = a^{X_i} \mod q$
-   - `Output2 <- Transform(Input2, Input1)`
+   - Output2 <- Transform(Input2, Input1)
      - Equation: $K = (Y_j)^{X_i} \mod q = a^{X_i X_j} \mod q$
 
 2. **SecureCommunication(transmitter, receiver)**
-   - `firstSignal <- GenerateSignal(transmitter)`
-   - `secondSignal <- GenerateSignal(receiver)`
-   - `transformedFirstSignal <- Transform(firstSignal)`
+   - firstSignal <- GenerateSignal(transmitter)
+   - secondSignal <- GenerateSignal(receiver)
+   - transformedFirstSignal <- Transform(firstSignal)
      - Equation: $Y_i = a^{X_i} \mod q$
-   - `transformedSecondSignal <- Transform(secondSignal)`
+   - transformedSecondSignal <- Transform(secondSignal)
      - Equation: $Y_j = a^{X_j} \mod q$
-   - `Transmit(transformedFirstSignal, receiver)`
-   - `Transmit(transformedSecondSignal, transmitter)`
-   - `thirdSignal <- Transform(transformedSecondSignal, firstSignal)`
+   - Transmit(transformedFirstSignal, receiver)
+   - Transmit(transformedSecondSignal, transmitter)
+   - thirdSignal <- Transform(transformedSecondSignal, firstSignal)
      - Equation: $K = (Y_j)^{X_i} \mod q$
-   - `fourthSignal <- Transform(transformedFirstSignal, secondSignal)`
+   - fourthSignal <- Transform(transformedFirstSignal, secondSignal)
      - Equation: $K = (Y_i)^{X_j} \mod q$
-   - `Encipher and Transmit message with secureKey`
-   - `Decipher received message with secureKey`
+   - Encipher and Transmit message with secureKey
+   - Decipher received message with secureKey
 
 3. **Authentication(transmitter, receiver)**
-   - `Verify if receiver can generate fourthSignal`
+   - Verify if receiver can generate fourthSignal
      - Equation: $K = (Y_j)^{X_i} \mod q$
 
 4. **GenerateSecureKey(transmitter, receiver)**
-   - `Repeat steps 2.a to 2.h for Secure Communication`
+   - Repeat steps 2.a to 2.h for Secure Communication
 
 5. **SecureCipherKeyApparatus(firstSignal, secondSignal)**
-   - `Incorporate functionalities of SecureKeyGenerator and GenerateSecureKey`
-   - `Apply infeasible to invert transformations for key generation`
+   - Incorporate functionalities of SecureKeyGenerator and GenerateSecureKey
+   - Apply infeasible to invert transformations for key generation
 
 6. **SecureCipherKeyMethod(firstSignal, secondSignal)**
-   - `Detailed method for secure cipher key generation`
-     - `Transform firstSignal: $Y_i = a^{X_i} \mod q$`
-     - `Generate secure cipher key: $K = (Y_j)^{X_i} \mod q$`
+   - Detailed method for secure cipher key generation
+     - Transform firstSignal: $Y_i = a^{X_i} \mod q$
+     - Generate secure cipher key: $K = (Y_j)^{X_i} \mod q$
 
 7. **SecureCipherKeyApparatusVariation(firstSignal, secondSignal)**
-   - `Variation of SecureCipherKeyApparatus for additional transformations in key generation`
+   - Variation of SecureCipherKeyApparatus for additional transformations in key generation
 
 8. **AdvancedSecureCipherKeyGenerator(firstSignal, secondSignal)**
-   - `Advanced apparatus for secure cipher key generation`
-     - `Third signal: $Y_i = a^{X_i} \mod q$`
-     - `Fourth signal: $K_{ij} = Y_j^{X_i} \mod q$`
-     - `Second signal: $Y_j = a^{X_j} \mod q$`
-     - `Sixth signal: $K_{ij} = Y_i^{X_j} \mod q$`
+   - Advanced apparatus for secure cipher key generation
+     - Third signal: $Y_i = a^{X_i} \mod q$
+     - Fourth signal: $K_{ij} = Y_j^{X_i} \mod q$
+     - Second signal: $Y_j = a^{X_j} \mod q$
+     - Sixth signal: $K_{ij} = Y_i^{X_j} \mod q$
