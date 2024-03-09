@@ -41,4 +41,5 @@ Symbol Key:
 - $γ_i$: Transformed signal of the $i$th converser.
 - $ϑ$: Large prime number.
 - $κ$: Secure cipher key generated.
-This formatting uses the dollar sign as a delimiter to encapsulate mathematical expressions in LaTeX within Markdown, making it suitable for documentation in GitHub repositories and other platforms that support Markdown with embedded LaTeX.
+
+
