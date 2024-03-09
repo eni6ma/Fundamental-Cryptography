@@ -100,4 +100,128 @@ Symbol Key:
 - $ϑ$: Large prime number.
 - $κ$: Secure cipher key generated.
 
+# Pseudo code Algorithm 
 
+Given the complexity and depth of the patent claims, a straightforward translation into pseudocode for each claim, while incorporating the associated mathematical equations, provides a comprehensive view of the cryptographic process described. The pseudocode is designed to highlight the logical flow and key operations specified in the claims, ensuring each step's intent and execution are clearly understood. 
+
+### Pseudocode for Patent Claims
+
+#### Claim 1: Secure Key Generator
+
+function SecureKeyGenerator(firstSignal, secondSignal):
+    // Inputs: firstSignal, secondSignal
+    // Outputs: thirdSignal, fourthSignal
+
+    thirdSignal = Transform(firstSignal)  // Transformation infeasible to invert
+    fourthSignal = TransformWith(firstSignal, secondSignal)  // Represents a secure key
+
+    return thirdSignal, fourthSignal
+
+_Equation for Transformation:_ \(Y_i = a^{X_i} \mod q\)
+
+#### Claim 2: Secure Communication Over Insecure Channel
+
+function SecureCommunication(transmitterFirstSignal, receiverSecondSignal):
+    // Transmitter Side
+    transformedFirstSignal = Transform(transmitterFirstSignal)
+    Transmit(transformedFirstSignal)
+
+    // Receiver Side
+    transformedSecondSignal = Transform(receiverSecondSignal)
+    Transmit(transformedSecondSignal)
+
+    // Generating Secure Cipher Key
+    thirdSignal = TransformWith(transformedSecondSignal, transmitterFirstSignal)
+    fourthSignal = TransformWith(transformedFirstSignal, receiverSecondSignal)
+
+    // Use thirdSignal or fourthSignal as the secure cipher key for encryption/decryption
+
+_Equations for Secure Cipher Key Generation:_ \(K = (Y_j)^{X_i} \mod q = a^{X_i X_j} \mod q\)
+
+#### Claim 3: Authentication in Secure Communication
+
+function AuthenticateReceiver(receiverFourthSignal):
+    // If receiver can generate fourthSignal, receiver's identity is authenticated
+    if Validate(receiverFourthSignal):
+        return True
+    else:
+        return False
+
+
+#### Claim 4: Secure Cipher Key Generation Method
+
+function GenerateSecureCipherKey(firstSignal, secondSignal):
+    transformedFirstSignal = Transform(firstSignal)
+    Transmit(transformedFirstSignal)
+
+    transformedSecondSignal = Transform(secondSignal)
+    Transmit(transformedSecondSignal)
+
+    thirdSignal = TransformWith(transformedSecondSignal, firstSignal)
+    fourthSignal = TransformWith(transformedFirstSignal, secondSignal)
+
+    // Both signals represent the secure cipher key
+    return thirdSignal, fourthSignal
+
+
+#### Claim 5: Apparatus for Generating a Secure Cipher Key
+
+class SecureKeyGeneratorApparatus:
+    def __init__(self, firstInput, secondInput):
+        self.firstInput = firstInput
+        self.secondInput = secondInput
+
+    function Generate():
+        thirdSignal = Transform(self.firstInput)
+        fourthSignal = TransformWith(self.firstInput, self.secondInput)
+
+        return thirdSignal, fourthSignal
+
+
+#### Claim 6: Secure Cipher Key Generation with Modulo Transformation
+
+function GenerateSecureCipherKeyModulo(firstSignal, secondSignal, q, a):
+    transformedFirstSignal = TransformModulo(firstSignal, a, q)
+    transformedSecondSignal = TransformModulo(secondSignal, a, q)
+
+    Transmit(transformedFirstSignal)
+    Transmit(transformedSecondSignal)
+
+    thirdSignal = TransformWithModulo(transformedSecondSignal, firstSignal, q)
+    fourthSignal = TransformWithModulo(transformedFirstSignal, secondSignal, q)
+
+    return thirdSignal, fourthSignal
+
+_Equation:_ \(K = Y_2^{X_1} \mod q = (a^{X_2})^{X_1} \mod q = a^{X_1 X_2} \mod q\)
+
+#### Claim 7: Apparatus for Generating Secure Cipher Key with Specific Transformations
+
+class SecureKeyGeneratorSpecific:
+    def __init__(self, firstInput, secondInput, q, a):
+        self.firstInput = firstInput
+        self.secondInput = secondInput
+        self.q = q
+        self.a = a
+
+    function Generate():
+        thirdSignal = TransformSpecific(self.firstInput, self.a, self.q)
+        fourthSignal = TransformWithSpecific(self.secondInput, self.firstInput, self.a, self.q)
+
+        return thirdSignal, fourthSignal
+
+
+#### Claim 8: Secure Cipher Key Generation with Detailed Steps
+
+function GenerateSecureCipherKeyDetailed(firstInput, secondInput, q, a):
+    // First transformation
+    $Y_i$ = TransformTo $Y_i$(a, firstInput, q)
+    // Second transformation
+    $K_ij$ = TransformTo $K_ij$($Y_i$, secondInput, q)
+
+    return $K_ij$
+
+Equation for $Y_i:_ \(Y_i = a^{x_i} \mod q\)$
+
+_Equation for $K_ij:_ \(K_{ij} = Y_j^{X_i} \mod q\)$
+
+This pseudocode reflects a high-level representation of the processes and mathematical underpinnings of the patent claims. It is intended for illustrative purposes, translating the conceptual operations into a form that can be more readily visualized and understood within the context of software development or algorithmic analysis.
