@@ -180,6 +180,7 @@ class SecureKeyGeneratorApparatus:
 
 #### Claim 6: Secure Cipher Key Generation with Modulo Transformation
 
+```cpp
 function GenerateSecureCipherKeyModulo(firstSignal, secondSignal, q, a):
     transformedFirstSignal = TransformModulo(firstSignal, a, q)
     transformedSecondSignal = TransformModulo(secondSignal, a, q)
@@ -191,11 +192,12 @@ function GenerateSecureCipherKeyModulo(firstSignal, secondSignal, q, a):
     fourthSignal = TransformWithModulo(transformedFirstSignal, secondSignal, q)
 
     return thirdSignal, fourthSignal
-
-_Equation:_ \(K = Y_2^{X_1} \mod q = (a^{X_2})^{X_1} \mod q = a^{X_1 X_2} \mod q\)
+```
+Equation:_ \(K = Y_2^{X_1} \mod q = (a^{X_2})^{X_1} \mod q = a^{X_1 X_2} \mod q\)
 
 #### Claim 7: Apparatus for Generating Secure Cipher Key with Specific Transformations
 
+```cpp
 class SecureKeyGeneratorSpecific:
     def __init__(self, firstInput, secondInput, q, a):
         self.firstInput = firstInput
@@ -208,7 +210,7 @@ class SecureKeyGeneratorSpecific:
         fourthSignal = TransformWithSpecific(self.secondInput, self.firstInput, self.a, self.q)
 
         return thirdSignal, fourthSignal
-
+```
 
 #### Claim 8: Secure Cipher Key Generation with Detailed Steps
 
@@ -220,8 +222,8 @@ function GenerateSecureCipherKeyDetailed(firstInput, secondInput, q, a):
 
     return $K_ij$
 
-Equation for $Y_i:_ \(Y_i = a^{x_i} \mod q\)$
-
-_Equation for $K_ij:_ \(K_{ij} = Y_j^{X_i} \mod q\)$
+Equation for  $Y_j = a^{X_j} \mod q$
+      - Sixth signal:
+ Equation for  $K_{ij} = Y_i^{X_j} \mod q$
 
 This pseudocode reflects a high-level representation of the processes and mathematical underpinnings of the patent claims. It is intended for illustrative purposes, translating the conceptual operations into a form that can be more readily visualized and understood within the context of software development or algorithmic analysis.
