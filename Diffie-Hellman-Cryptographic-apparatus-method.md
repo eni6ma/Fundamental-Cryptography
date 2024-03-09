@@ -37,8 +37,8 @@ $κ = γ_1^{ξ_2} \mod ϑ$
 
 Symbol Key:
 - $α$: Public base used for transformation.
-- $ξ_i$: Secret signal of the $x_i$th converser.
-- $γ_i$: Transformed signal of the $x_i$th converser.
+- $ξ_i$: Secret signal of the $x_i$ th converser.
+- $γ_i$: Transformed signal of the $x_i$ th converser.
 - $ϑ$: Large prime number.
 - $κ$: Secure cipher key generated.
 
