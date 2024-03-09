@@ -8,7 +8,7 @@ A cryptographic system transmits a computationally secure cryptogram over an ins
 
 ## The Claims : Algorithm & Equations  
 
-1. SecureKeyGenerator(firstSignal, secondSignal)
+ 1. SecureKeyGenerator(firstSignal, secondSignal)
     a. Input1 <- firstSignal
     b. Input2 <- secondSignal
     c. Output1 = Transform(Input1)  # Transformation is infeasible to invert
@@ -16,7 +16,7 @@ A cryptographic system transmits a computationally secure cryptogram over an ins
     d. Output2 = Transform(Input2 with Input1)  # Represents a secure key
        - Equation: $K = (Y_j)^{X_i} \mod q = a^{X_i X_j} \mod q$
 
-2. SecureCommunication(transmitter, receiver)
+ 2. SecureCommunication(transmitter, receiver)
     a. firstSignal <- GenerateSignal(transmitter)
     b. secondSignal <- GenerateSignal(receiver)
     c. transformedFirstSignal = Transform(firstSignal)
@@ -32,27 +32,27 @@ A cryptographic system transmits a computationally secure cryptogram over an ins
     i. Encipher and transmit message with secureKey
     j. Decipher received message with secureKey
 
-3. Authentication(transmitter, receiver)
+ 3. Authentication(transmitter, receiver)
     - If receiver generates fourthSignal, identity authenticated
       - Equation: $K = (Y_j)^{X_i} \mod q$
 
-4. GenerateSecureKey(transmitter, receiver)
+ 4. GenerateSecureKey(transmitter, receiver)
     a. Same as steps in 2.a to 2.h
     b. Secure key generation without direct cipher key exchange
 
-5. SecureCipherKeyApparatus(firstSignal, secondSignal)
+ 5. SecureCipherKeyApparatus(firstSignal, secondSignal)
     - Combines functionalities of SecureKeyGenerator and GenerateSecureKey
     - Uses transformations that are infeasible to invert for key generation
 
-6. SecureCipherKeyMethod(firstSignal, secondSignal)
+ 6. SecureCipherKeyMethod(firstSignal, secondSignal)
     - Detailed steps for generating a secure cipher key using transformations that are infeasible to invert
     - Equation for transforming firstSignal: $Y_i = a^{X_i} \mod q$
     - Equation for generating secure cipher key: $K = (Y_j)^{X_i} \mod q$
 
-7. SecureCipherKeyApparatusVariation(firstSignal, secondSignal)
+ 7. SecureCipherKeyApparatusVariation(firstSignal, secondSignal)
     - Variation of SecureCipherKeyApparatus for generating a secure cipher key with additional transformations
 
-8. AdvancedSecureCipherKeyGenerator(firstSignal, secondSignal)
+ 8. AdvancedSecureCipherKeyGenerator(firstSignal, secondSignal)
     - An advanced apparatus for generating a secure cipher key
     - Equations for generating third and fourth signals:
       - Third signal: $Y_i = a^{X_i} \mod q$
