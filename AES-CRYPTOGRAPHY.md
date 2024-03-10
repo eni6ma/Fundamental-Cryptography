@@ -24,7 +24,7 @@ AES is a symmetric block cipher that encrypts and decrypts data in fixed-size bl
  4. **Final Round:**
    The final round is similar to the main rounds but does not include the MixColumns operation.
 
-```latex
+
 To convert the pseudocode functions into mathematical notations, I'll describe each operation with equations using Greek symbols for functions and variables. Note that these representations are simplified and conceptual, aiming to capture the essence of the AES operations rather than detailed algorithmic steps.
 
 ### 1. Key Expansion (\(\text{Κ}\))
