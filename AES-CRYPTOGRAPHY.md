@@ -42,6 +42,61 @@ ShiftRows(state)
 AddRoundKey(state, Key[Nr])
 ```
 
+## Specific function pseudo code examples 
+ This pseudocode aims to represent the key operations within the AES encryption process without delving into the detailed mathematics or the specific implementations that would be required in a real-world programming scenario.
+
+### 1. KeyExpansion
+```
+func KeyExpansion(key []byte) -> [][]byte:
+    Initialize an empty array for round keys
+    Derive the first round key directly from the input key
+    For each round:
+        Derive the next round key based on the previous round key and the AES key schedule algorithm
+        This includes operations like RotWord, SubWord, and Rcon application for key expansion
+    Return the array of round keys
+```
+
+### 2. AddRoundKey
+```
+func AddRoundKey(state, roundKey []byte) -> []byte:
+    Initialize a new byte array for the resulting state
+    For each byte in the state:
+        XOR the byte with the corresponding byte in the roundKey
+        Store the result in the new state array
+    Return the new state array
+```
+
+### 3. SubBytes
+```
+func SubBytes(state []byte) -> []byte:
+    Initialize a new byte array for the resulting state
+    For each byte in the state:
+        Substitute the byte using the AES S-box
+        Store the result in the new state array
+    Return the new state array
+```
+
+### 4. ShiftRows
+```
+func ShiftRows(state []byte) -> []byte:
+    Perform the row shifting operation on the state matrix
+    Shift the first row by 0 (no shift)
+    Shift the second row by 1 to the left
+    Shift the third row by 2 to the left
+    Shift the fourth row by 3 to the left
+    Return the modified state as a byte array
+```
+
+### 5. MixColumns
+```
+func MixColumns(state []byte) -> []byte:
+    For each column in the state matrix:
+        Apply the MixColumns transformation
+        This involves multiplying the column by a fixed polynomial in GF(2^8)
+    Return the modified state as a byte array
+```
+
+These pseudocode snippets provide a high-level overview of each function's purpose within the AES encryption process. The actual implementation of these functions requires a deeper understanding of cryptographic principles, as well as specific algorithms for operations like byte substitution (S-box), row shifting, and column mixing.
 
 ## The AES Algorithm Sequence
 Various cryptographic communication systems and methods that revolve around encoding (encryption) and decoding (decryption) mechanisms for secure message transmission. Here are the mathematical operations and principles extracted and expressed in LaTeX notation:
