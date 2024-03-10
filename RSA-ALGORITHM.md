@@ -6,7 +6,7 @@
 #### 1. Initialization:
 The first step in the RSA algorithm is to generate the keys used for encryption and decryption. This involves selecting prime numbers and computing necessary values based on them.
 
-```plaintext
+
 1. Select two distinct large prime numbers `p` and `q`.
 2. Compute $n = p \times q$. ($n$ is used as the modulus for both the public and private keys)
 3. Calculate the totient: $\phi = (p - 1) \times (q - 1)$.
