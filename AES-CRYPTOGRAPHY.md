@@ -1,4 +1,77 @@
-# AES Encryption 
+# AES : Cyptography 
+
+The claims related to cryptographic key generation and encryption mechanisms, specifically in the context of the Advanced Encryption Standard (AES)—Rijndael block cipher algorithm. Here's a breakdown of these claims into a more structured format for clarity:
+
+## Claim 1: Key Generation Improvement
+- **Context**: In a key generator for AES—Rijndael algorithm.
+- **Objective**: Generate round-key words "on-the-fly" in reverse direction for decryption.
+- **Method Steps**:
+  1. **Provide memory** for storing a final set of $N_k$ round-key words.
+  2. **Perform key expansion** in a forward direction during encryption, storing the final $N_k$ words.
+  3. **Set key generator** for decryption.
+  4. **Derive preceding round-key words** "on-the-fly" using XOR logic, with specific conditions for transformations.
+- **Implementation**: As a hardware circuit with multiple S-boxes for S-box byte substitutions, featuring different power consumption signatures. A pseudo-random generator selects pathways to these S-boxes during key expansion.
+
+## Claim 2: Pseudo-random Generator Specification
+- **Relation**: Refers to the method of claim 1.
+- **Specification**: The pseudo-random generator is detailed as a linear feedback shift register with n-bit output, coupled with a look-up table for pathway selection control signals.
+
+## Claim 3: Differential Power Analysis Countermeasure
+- **Context**: In a hardware block cipher circuit with a pre-mix XOR operation.
+- **Objective**: Introduce a countermeasure against differential power analysis.
+- **Implementation**: A dummy circuit with matched propagation delay to the pre-mix subcircuit, incorporating a pseudo-random generator and an XOR array, to insert pseudo-random noise into the power signature during the initial pre-mix XOR operation.
+
+## Claim 4: Pseudo-random Generator Detail for Claim 3
+- **Relation**: Refers to the circuit of claim 3.
+- **Specification**: The pseudo-random generator consists of linear feedback shift registers.
+
+## Claim 5: Word Width Matching
+- **Relation**: Refers to the circuit of claim 3.
+- **Specification**: The pseudo-random generator and XOR array of the dummy circuit match the word width in bits of the pre-mix subcircuit.
+
+## Claim 6: Pre-mix and Encryption Round Combination
+- **Context**: In a hardware block cipher circuit for a cipher algorithm.
+- **Objective**: Combine the pre-mix operation with the first cipher encryption round.
+- **Method Steps**:
+  1. **Pre-process the cipher key** for first cipher encryption round key words while loading plaintext.
+  2. **Execute the first cipher encryption round** on the pre-mixed plaintext with pre-generated first round-key words.
+
+Each claim specifies a novel aspect of the cryptographic process, focusing on efficiency, security (particularly against differential power analysis), and the practical implementation of these cryptographic methods in hardware. The structure of these claims reflects a typical approach in patent documentation to provide a clear definition of the inventive elements, their implementation details, and, in some cases, specific embodiments or applications of the invention.
+
+
+## Key of Greek Symbols and Mathematical Notation
+
+- $\Lambda$: Function representing the key expansion routine.
+- $N_k$: Number of cipher key words.
+- $N_b$: Cipher block size in words.
+- $N_r$: Number of rounds in the cipher algorithm.
+- $w[i]$: Round-key words.
+- $\oplus$: XOR logic operation.
+- $\Theta$: Transformation sequence including cyclic byte shift, S-box byte substitution, and XOR with a round constant.
+- $S$: S-box function for byte substitution.
+- $R$: Pseudo-random generator function.
+- $\Sigma$: Function representing the differential power analysis countermeasure.
+- $P$: Pre-mix operation.
+- $E$: Encryption operation.
+- $D$: Decryption operation.
+
+## Algorithmic Sequence in Table Format
+
+| Step | Process | Mathematical Representation |
+|------|---------|-----------------------------|
+| 1    | Key Storage | Store final set of $N_k$ round-key words. |
+| 2    | Key Expansion | Perform $\Lambda$ in a forward direction to obtain $w[i]$ for $i = 0$ to $N_b(N_r + 1) - 1$. |
+| 3    | On-the-fly Key Generation for Decryption | For $i \geq N_k$, generate $w[i - N_k]$ using $\Psi(w[i], w[i - 1], \Theta)$ as needed. |
+| 4    | S-box Substitution | Apply $S$ for byte substitution in $\Theta$ based on conditions (e.g., $i \mod N_k = 0$). |
+| 5    | Pseudo-random Pathway Selection | Use $R$ to select pathways to S-boxes for byte substitution in $\Theta$. |
+| 6    | Differential Power Analysis Countermeasure | Implement $\Sigma$ using a dummy circuit with pseudo-random noise for the initial $P$ operation. |
+| 7    | Pre-mix and Encryption Round Combination | Combine $P$ with the first $E$ round, applying pre-processed cipher key and pre-mixed plaintext. |
+
+---- 
+
+# AES Encryption Patent
+
+
 
 AES is a symmetric block cipher that encrypts and decrypts data in fixed-size blocks (128 bits) using cryptographic keys of 128, 192, or 256 bits. The core operations in AES include SubBytes, ShiftRows, MixColumns, and AddRoundKey, executed over multiple rounds. The number of rounds depends on the key size: 10 rounds for 128-bit keys, 12 rounds for 192-bit keys, and 14 rounds for 256-bit keys.
 
@@ -81,46 +154,6 @@ This table and notation systematically represent the cryptographic processes inv
 
 ## AES Explained
 
-
-| Step          | Operation             | Equation                                                                                 |
-|---------------|-----------------------|------------------------------------------------------------------------------------------|
-| Key Expansion | $\(\text{Κ}\)$        | $\(\mathbf{W}_r = \text{Κ}(k, r)\)$                                                      |
-| Add Round Key | $\(\text{Α}\)$        | $\(s_{i} = s_{i} \oplus w_{i}, \quad \forall i \in \text{state indices}\)$              |
-| SubBytes      | $\(\text{Σ}\)$        | $\(s_{i} = \Sigma(s_{i}), \quad \forall i \in \text{state indices}\)$                   |
-| ShiftRows     | $\(\text{Σ}\)$        | $\(S = \text{Σ}(S)\)$                                                                   |
-| MixColumns    | $\(\text{Μ}\)$        | $\(c = \text{Μ}(c), \quad \forall c \in \text{columns of } S\)$                         |
-
-
-### 1. Key Expansion  
-Given a cipher key $\( k \)$, produce a series of round keys $\( \mathbf{W} \)$ for each round \( r \).
-
-$$\mathbf{W}_r = \text{Κ}(k, r)$$
-
-This involves operations like byte rotation $\( \text{RotWord} \)$, S-box substitution $\( \text{SubWord} \)$, and round constant addition $\( \text{Rcon} \)$ application.
-
-### 2. Add Round Key 
-For each byte in the state \( s \) and the round key \( w \), perform an XOR operation.
-
-$$s_{i} = s_{i} \oplus w_{i}, \quad \forall i \in \text{state indices}$$
-
-### 3. SubBytes 
-For each byte $\( s_i \)$ in the state, apply the S-box transformation $\( \Sigma \)$.
-
-$$s_{i} = \Sigma(s_{i}), \quad \forall i \in \text{state indices}$$
-
-### 4. ShiftRows 
-Shift rows of the state matrix $\( S \)$ by different offsets.
-
-$$S = \text{Σ}(S)$$
-
-Where the shift operation depends on the row index.
-
-### 5. MixColumns  
-For each column $\( c \)$ in the state matrix, apply the MixColumns transformation $\( \text{Μ} \)$.
-
-$$c = \text{Μ}(c), \quad \forall c \in \text{columns of } S$$
-
-Involves polynomial multiplication over $\( \text{GF}(2^8) \)$.
 
 Each of these equations represents a step in the AES encryption process, utilizing transformations and operations defined in the AES specification.
 
