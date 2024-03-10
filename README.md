@@ -2,6 +2,11 @@
 
 by Dylan Rosario (Inventor of Rosario Cypher, Chairman of Eni6ma.org)
 
+ 1. [Diffie-Hellman-Cryptographic-apparatus-method](https://github.com/eni6ma-org/Fundamental-Cryptography/blob/main/Diffie-Hellman-Cryptographic-apparatus-method.md)
+ 2. [AES Encryption](https://github.com/eni6ma-org/Fundamental-Cryptography/blob/main/AES-CRYPTOGRAPHY.md)
+ 3. [RSA Key Exchange](https://github.com/eni6ma-org/Fundamental-Cryptography/blob/main/RSA-ALGORITHM.md)
+ 4. [Cryptographic Primitives](https://github.com/eni6ma-org/Fundamental-Cryptography/blob/main/Primitives.md)
+
 ## Primitive functions for Cryptographic systems
 
 In the realms of cryptographic systems, including AES-Rijndael, RSA, and Diffie-Hellman, a fundamental reliance on mathematical principles underpins secure communication. The initiation of these protocols involves receiving input values or keys, marked as $\alpha$ and $\beta$. These inputs are pivotal, fueling the ensuing series of transformations and encryptions. An initial transformation function, denoted as $\Phi$, adapts these inputs for further cryptographic processes. This function's nature varies across algorithms: $\Phi$ might signify key expansion within AES, the derivation of public keys in Diffie-Hellman, or engage in modular arithmetic for RSA key creation.
