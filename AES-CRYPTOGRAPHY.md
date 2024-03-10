@@ -37,12 +37,12 @@ This involves operations like byte rotation $\( \text{RotWord} \)$, S-box substi
 ### 2. Add Round Key ($\(\text{Α}\)$)
 For each byte in the state \( s \) and the round key \( w \), perform an XOR operation.
 
-$$s'_{i} = s_{i} \oplus w_{i}, \quad \forall i \in \text{state indices}$$
+$$s_{i} = s_{i} \oplus w_{i}, \quad \forall i \in \text{state indices}$$
 
 ### 3. SubBytes ($\(\text{Σ}\)$)
 For each byte $\( s_i \)$ in the state, apply the S-box transformation $\( \Sigma \)$.
 
-$$s'_{i} = \Sigma(s_{i}), \quad \forall i \in \text{state indices}$$
+$$s_{i} = \Sigma(s_{i}), \quad \forall i \in \text{state indices}$$
 
 ### 4. ShiftRows ($\(\text{Σ}\)$)
 Shift rows of the state matrix $\( S \)$ by different offsets.
@@ -54,7 +54,7 @@ Where the shift operation depends on the row index.
 ### 5. MixColumns ($\(\text{Μ}\)$)
 For each column $\( c \)$ in the state matrix, apply the MixColumns transformation $\( \text{Μ} \)$.
 
-$$c' = \text{Μ}(c), \quad \forall c \in \text{columns of } S$$
+$$c = \text{Μ}(c), \quad \forall c \in \text{columns of } S$$
 
 Involves polynomial multiplication over $\( \text{GF}(2^8) \)$.
 
