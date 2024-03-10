@@ -29,6 +29,62 @@ To decrypt a ciphertext $C$ back into the original message $M$ using the private
 
  - Compute the original message $M$ using the equation: $M = C^d \mod n$.
 
+```golang
+
+package main
+
+import (
+    "math/big"
+    "crypto/rand"
+)
+
+// KeyGeneration generates RSA keys given prime numbers p and q
+func KeyGeneration(p, q *big.Int) (publicKey, privateKey *[2]*big.Int) {
+    n := new(big.Int).Mul(p, q)
+    phi := new(big.Int).Mul(new(big.Int).Sub(p, big.NewInt(1)), new(big.Int).Sub(q, big.NewInt(1)))
+    e := big.NewInt(3)
+    d := new(big.Int).ModInverse(e, phi)
+    return &[2]*big.Int{e, n}, &[2]*big.Int{d, n}
+}
+
+// Encrypt encrypts message M with public key
+func Encrypt(M *big.Int, publicKey *[2]*big.Int) *big.Int {
+    e, n := publicKey[0], publicKey[1]
+    C := new(big.Int).Exp(M, e, n)
+    return C
+}
+
+// Decrypt decrypts ciphertext C with private key
+func Decrypt(C *big.Int, privateKey *[2]*big.Int) *big.Int {
+    d, n := privateKey[0], privateKey[1]
+    M := new(big.Int).Exp(C, d, n)
+    return M
+}
+
+func main() {
+    // Example usage
+    p, _ := rand.Prime(rand.Reader, 1024)
+    q, _ := rand.Prime(rand.Reader, 1024)
+    publicKey, privateKey := KeyGeneration(p, q)
+
+    M := big.NewInt(123456789) // Example message
+    C := Encrypt(M, publicKey)
+    decryptedM := Decrypt(C, privateKey)
+
+    fmt.Println("Original Message:", M)
+    fmt.Println("Encrypted Message:", C)
+    fmt.Println("Decrypted Message:", decryptedM)
+}
+
+
+```
+
+Important Notes:
+ - RSA's security is rooted in the difficulty of prime factorization.
+ - The choice of e and the computation of d ensure that only the private key holder can decrypt messages encrypted with the public key.
+ - RSA serves both data encryption and digital signature purposes.
+
+---- 
 
 ### RSA Cryptographic System Pseudocode
 
