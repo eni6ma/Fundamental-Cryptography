@@ -7,11 +7,27 @@
 The first step in the RSA algorithm is to generate the keys used for encryption and decryption. This involves selecting prime numbers and computing necessary values based on them.
 
 
-1. Select two distinct large prime numbers `p` and `q`.
-2. Compute $n = p \times q$. ($n$ is used as the modulus for both the public and private keys)
-3. Calculate the totient: $\phi = (p - 1) \times (q - 1)$.
-4. Choose an integer $e$ such that $1 < e < \phi$ and $\gcd(e, \phi) = 1$; $e$ is the public key exponent.
-5. Calculate $d$ as the modular multiplicative inverse of $e$ modulo $\phi$. ($d$ is the private key exponent)
+#### [1] Select two distinct large prime numbers `p` and `q`.
+ - Compute $n = p \times q$. ($n$ is used as the modulus for both the public and private keys)
+ - Calculate the totient: $\phi = (p - 1) \times (q - 1)$.
+ - Choose an integer $e$ such that $1 < e < \phi$ and $\gcd(e, \phi) = 1$; $e$ is the public key exponent.
+ - Calculate $d$ as the modular multiplicative inverse of $e$ modulo $\phi$. ($d$ is the private key exponent)
+
+#### [2] Public and Private Keys:
+ - Public Key: The public key is a pair $(e, n)$. It is used for encrypting messages and is shared openly.
+ - Private Key: The private key is a pair $(d, n)$. It is used for decrypting messages and must be kept secret.
+
+#### [3] Encoding (Encryption):
+To encrypt a message $M$ into a ciphertext $C$ using the recipient's public key $(e, n)$, follow this process.
+Ensure that the message $M$ is a numeric value smaller than $n$.
+
+ -  Represent the plaintext message $M$ as an integer in $[0, n-1]$.
+ -  Compute the ciphertext $C$ using the equation: $C = M^e \mod n$.
+
+#### [4] Decoding (Decryption):
+To decrypt a ciphertext $C$ back into the original message $M$ using the private key $(d, n)$, follow this process:
+
+ - Compute the original message $M$ using the equation: $M = C^d \mod n$.
 
 
 ### RSA Cryptographic System Pseudocode
