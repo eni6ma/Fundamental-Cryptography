@@ -1,6 +1,18 @@
 
 ### RSA Cryptographic Claims Summary
 
+### RSA Cryptographic Algorithm Explained with Pseudocode
+
+#### 1. Initialization:
+The first step in the RSA algorithm is to generate the keys used for encryption and decryption. This involves selecting prime numbers and computing necessary values based on them.
+
+```plaintext
+1. Select two distinct large prime numbers `p` and `q`.
+2. Compute $n = p \times q$. ($n$ is used as the modulus for both the public and private keys)
+3. Calculate the totient: $\phi = (p - 1) \times (q - 1)$.
+4. Choose an integer $e$ such that $1 < e < \phi$ and $\gcd(e, \phi) = 1$; $e$ is the public key exponent.
+5. Calculate $d$ as the modular multiplicative inverse of $e$ modulo $\phi$. ($d$ is the private key exponent)
+
 
 ### RSA Cryptographic System Pseudocode
 
