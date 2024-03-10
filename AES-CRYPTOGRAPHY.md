@@ -2,6 +2,83 @@
 
 AES is a symmetric block cipher that encrypts and decrypts data in fixed-size blocks (128 bits) using cryptographic keys of 128, 192, or 256 bits. The core operations in AES include SubBytes, ShiftRows, MixColumns, and AddRoundKey, executed over multiple rounds. The number of rounds depends on the key size: 10 rounds for 128-bit keys, 12 rounds for 192-bit keys, and 14 rounds for 256-bit keys.
 
+The claims related to cryptographic key generation and encryption mechanisms, specifically in the context of the Advanced Encryption Standard (AES)—Rijndael block cipher algorithm. Here's a breakdown of these claims into a more structured format for clarity:
+
+Claim 1: Key Generation Improvement
+- Context: In a key generator for AES—Rijndael algorithm.
+- Objective: Generate round-key words "on-the-fly" in reverse direction for decryption.
+- Method Steps:
+  1. Provide memory for storing a final set of Nk round-key words.
+  2. Perform key expansion in a forward direction during encryption, storing the final Nk words.
+  3. Set key generator for decryption.
+  4. Derive preceding round-key words "on-the-fly" using XOR logic, with specific conditions for transformations.
+- Implementation: As a hardware circuit with multiple S-boxes for S-box byte substitutions, featuring different power consumption signatures. A pseudo-random generator selects pathways to these S-boxes during key expansion.
+
+Claim 2: Pseudo-random Generator Specification
+- Relation: Refers to the method of claim 1.
+- Specification: The pseudo-random generator is detailed as a linear feedback shift register with n-bit output, coupled with a look-up table for pathway selection control signals.
+
+Claim 3: Differential Power Analysis Countermeasure
+- Context: In a hardware block cipher circuit with a pre-mix XOR operation.
+- Objective: Introduce a countermeasure against differential power analysis.
+- Implementation: A dummy circuit with matched propagation delay to the pre-mix subcircuit, incorporating a pseudo-random generator and an XOR array, to insert pseudo-random noise into the power signature during the initial pre-mix XOR operation.
+
+Claim 4: Pseudo-random Generator Detail for Claim 3
+- Relation: Refers to the circuit of claim 3.
+- Specification: The pseudo-random generator consists of linear feedback shift registers.
+
+Claim 5: Word Width Matching
+- Relation: Refers to the circuit of claim 3.
+- Specification: The pseudo-random generator and XOR array of the dummy circuit match the word width in bits of the pre-mix subcircuit.
+
+Claim 6: Pre-mix and Encryption Round Combination
+- Context: In a hardware block cipher circuit for a cipher algorithm.
+- Objective: Combine the pre-mix operation with the first cipher encryption round.
+- Method Steps:
+  1. Pre-process the cipher key for first cipher encryption round key words while loading plaintext.
+  2. Execute the first cipher encryption round on the pre-mixed plaintext with pre-generated first round-key words.
+
+Each claim specifies a novel aspect of the cryptographic process, focusing on efficiency, security (particularly against differential power analysis), and the practical implementation of these cryptographic methods in hardware. The structure of these claims reflects a typical approach in patent documentation to provide a clear definition of the inventive elements, their implementation details, and, in some cases, specific embodiments or applications of the invention.
+
+To convert the outlined cryptographic claims into mathematical notation with a focus on functions, variables, and algorithm sequences, we'll employ a structured approach. This conversion will involve detailing the sequence of operations for the Advanced Encryption Standard (AES)—Rijndael block cipher algorithm key generation and related security measures. Greek alphabet characters will represent functions and variables, providing a clear and systematic representation.
+
+
+Key of Greek Symbols and Mathematical Notation
+
+- ( Lambda ): Function representing the key expansion routine.
+- ( N_k ): Number of cipher key words.
+- ( N_b ): Cipher block size in words.
+- ( N_r ): Number of rounds in the cipher algorithm.
+- ( w[i] ): Round-key words.
+- ( Psi ): XOR logic operation.
+- ( Theta ): Transformation sequence including cyclic byte shift, S-box byte substitution, and XOR with a round constant.
+- ( S ): S-box function for byte substitution.
+- ( R ): Pseudo-random generator function.
+- ( Sigma ): Function representing the differential power analysis countermeasure.
+- ( P ): Pre-mix operation.
+- ( E ): Encryption operation.
+- ( D ): Decryption operation.
+
+
+Algorithmic Sequence in Table Format
+
+
+
+
+Process Description
+
+1. Key Storage: Initial storage of ( N_k ) round-key words in preparation for key expansion.
+2. Key Expansion: Forward direction execution of the key expansion routine ( Lambda ) generates the round-key words ( w[i] ) required for AES operations.
+3. On-the-fly Key Generation: For decryption, reverse direction round-key words are generated as needed, employing XOR logic (( Psi )) and specific transformations (( Theta )).
+4. S-box Substitution: The transformation sequence ( Theta ) includes S-box byte substitution (( S )), applied under specified conditions for encryption and decryption.
+5. Pseudo-random Pathway Selection: A pseudo-random generator function ( R ) diversifies the pathways for S-box substitutions, enhancing security.
+6. Countermeasure Implementation: ( Sigma ) introduces a countermeasure against differential power analysis, utilizing a dummy circuit to mask power consumption patterns.
+7. Pre-mix and Encryption: The initial pre-mix operation ( P ) is integrated with the first encryption round ( E ), streamlining the encryption process with pre-processed keys and plaintext.
+
+This table and notation systematically represent the cryptographic processes involved in AES—Rijndael algorithm key generation, focusing on efficiency, security measures, and the sequence of operations. The use of Greek symbols and clear mathematical notation aids in comprehensively detailing the algorithmic steps and their cryptographic significance.
+
+
+
 ## AES Explained
 
 
