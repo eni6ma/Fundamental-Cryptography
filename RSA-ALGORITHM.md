@@ -2,6 +2,29 @@
 # RSA Cryptographic Claims Summary
 
 
+The cryptographic communications system outlined through claims provides a comprehensive framework for secure message transmission. Claim 1 establishes the foundation by introducing a system that encodes a message $M$ into ciphertext $C$ using a composite number $n = p \cdot q$, where $p$ and $q$ are prime numbers. The encoding and decoding mechanisms are mathematically defined by $C \equiv M^e \mod n$ and $M' \equiv C^d \mod n$, respectively, showcasing the system's capability to transform messages for secure communication.
+
+Claim 2 delves into the operational details of the transformation process, highlighting the use of register means for storing digital signals and an exponentiation network that processes these signals via modulo multiplication. This technical setup facilitates the secure encoding and decoding of messages.
+
+The narrative expands in Claim 3 to describe a communications system capable of transferring message signals $M_i$ across multiple terminals, each equipped with unique encoding and decoding keys. This extends the system's application to a broader network, emphasizing scalability and security in message transmission across different nodes.
+
+Claim 4 reiterates the importance of the system components in supporting the transformation process, specifically within the context of encoding messages for transmission. This emphasizes the robustness of the system's design in handling the encoding process.
+
+Further extending the system's capabilities, Claim 5 introduces the functionality of transmitting encoded messages between terminals and subsequently decoding them back to their original format. This process ensures that messages remain secure throughout their transmission journey.
+
+Claim 6 broadens the encoding mechanism by incorporating the conversion of signed messages into block word signals and then into signed ciphertext word signals, enhancing the system's versatility in encoding messages.
+
+In Claim 7, the focus shifts to the transmission of signed ciphertext between terminals and its decryption back to the original message, highlighting the system's comprehensive approach to maintaining message integrity and confidentiality.
+
+Claim 8 describes a scalable communication system where message signals $M_i$ are transferred among multiple terminals, each capable of encoding messages into block word signals for secure transmission. This showcases the system's adaptability to various communication needs.
+
+Claim 9, similar to claims 2 and 4, revisits the system's capabilities in transforming message signals, emphasizing the critical role of registers and an exponentiation network in secure message processing.
+
+Claims 10 through 14 further elaborate on the system's encoding and decoding processes, detailing the transmission of ciphertext between terminals, the enhancement of encoding systems, and the decryption capabilities to recover original messages. These claims collectively underscore the system's comprehensive approach to secure communications.
+
+Claims 15 through 22, while not detailed individually, imply extensions and variations of the described system and methods. These claims suggest additional functionalities and adaptations that bolster the cryptographic communications system's robustness and flexibility, catering to a wide range of encryption and decryption processes for secure message handling.
+
+
 | Claim Number | Summary |
 |--------------|---------|
 | 1 | Establishes a cryptographic communications system that includes a communications channel, an encoding mechanism to transform a message $M$ into a ciphertext $C$ using a composite number $n = p \cdot q$ (where $p$ and $q$ are prime), and a decoding mechanism to transform $C$ back to message $M'$. $C$ and $M'$ are determined by $C \equiv M^e \mod n$ and $M' \equiv C^d \mod n$ respectively, with $e$ and $d$ being specially chosen numbers. |
@@ -20,7 +43,6 @@
 | 14 | Similar to previous transformation process descriptions, focusing on the encoding and decoding mechanisms within a multi-terminal communications system. |
 | 15 - 22 | Extensions and variations of the described system and methods, emphasizing the robustness and flexibility of the cryptographic communications system in handling different types of message signals and encryption/decryption processes. |
 
-Ensure each mathematical equation is properly escaped with the dollar sign ($) for LaTeX notation in Markdown.
 
 
 ## RSA Cryptographic Algorithm Explained with Pseudocode
