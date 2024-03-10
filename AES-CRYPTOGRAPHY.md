@@ -4,29 +4,6 @@ AES is a symmetric block cipher that encrypts and decrypts data in fixed-size bl
 
 ## AES Explained
 
- 1. **Key Expansion (Key Schedule):**
-   AES generates a series of round keys from the cipher key using the Rijndael key schedule. The round keys are used in each round of the AES encryption and decryption processes.
-
- 2. **Initial Round:**
-   - **AddRoundKey:**
-     Each byte of the state is combined with the round key using bitwise XOR.
-     $$\text{State} \oplus \text{RoundKey}$$
-
- 3. **Main Rounds:**
-   Each main round consists of four operations:
-   - **SubBytes:** A non-linear substitution step where each byte is replaced with another according to a lookup table.
-   - **ShiftRows:** A transposition step where each row of the state is shifted cyclically a certain number of steps.
-   - **MixColumns:** A mixing operation that operates on the columns of the state, combining the four bytes in each column.
-   - **AddRoundKey:** Each byte of the state is combined with the round key using bitwise XOR.
-   
-   The MixColumns step is skipped in the final round.
-
- 4. **Final Round:**
-   The final round is similar to the main rounds but does not include the MixColumns operation.
-
-
-To convert the pseudocode functions into mathematical notations, I'll describe each operation with equations using Greek symbols for functions and variables. Note that these representations are simplified and conceptual, aiming to capture the essence of the AES operations rather than detailed algorithmic steps.
-
 ### 1. Key Expansion  
 Given a cipher key $\( k \)$, produce a series of round keys $\( \mathbf{W} \)$ for each round \( r \).
 
@@ -59,6 +36,26 @@ $$c = \text{Μ}(c), \quad \forall c \in \text{columns of } S$$
 Involves polynomial multiplication over $\( \text{GF}(2^8) \)$.
 
 Each of these equations represents a step in the AES encryption process, utilizing transformations and operations defined in the AES specification.
+
+ 1. **Key Expansion (Key Schedule):**
+   AES generates a series of round keys from the cipher key using the Rijndael key schedule. The round keys are used in each round of the AES encryption and decryption processes.
+
+ 2. **Initial Round:**
+   - **AddRoundKey:**
+     Each byte of the state is combined with the round key using bitwise XOR.
+     $$\text{State} \oplus \text{RoundKey}$$
+
+ 3. **Main Rounds:**
+   Each main round consists of four operations:
+   - **SubBytes:** A non-linear substitution step where each byte is replaced with another according to a lookup table.
+   - **ShiftRows:** A transposition step where each row of the state is shifted cyclically a certain number of steps.
+   - **MixColumns:** A mixing operation that operates on the columns of the state, combining the four bytes in each column.
+   - **AddRoundKey:** Each byte of the state is combined with the round key using bitwise XOR.
+   
+   The MixColumns step is skipped in the final round.
+
+ 4. **Final Round:**
+   The final round is similar to the main rounds but does not include the MixColumns operation.
 
 
 ## PSEUDO CODE
