@@ -4,14 +4,14 @@ AES is a symmetric block cipher that encrypts and decrypts data in fixed-size bl
 
 ## AES Explained
 
-+---------------+-----------------------+------------------------------------------------------------------------------------------+
+
 | Step          | Operation             | Equation                                                                                 |
 |---------------|-----------------------|------------------------------------------------------------------------------------------|
 | Key Expansion | $\(\text{Κ}\)$        | $\(\mathbf{W}_r = \text{Κ}(k, r)\)$                                                      |
-| Add Round Key | $\(\text{Α}\)$        | $\(s'_{i} = s_{i} \oplus w_{i}, \quad \forall i \in \text{state indices}\)$              |
-| SubBytes      | $\(\text{Σ}\)$        | $\(s'_{i} = \Sigma(s_{i}), \quad \forall i \in \text{state indices}\)$                   |
-| ShiftRows     | $\(\text{Σ}\)$        | $\(S' = \text{Σ}(S)\)$                                                                   |
-| MixColumns    | $\(\text{Μ}\)$        | $\(c' = \text{Μ}(c), \quad \forall c \in \text{columns of } S\)$                         |
+| Add Round Key | $\(\text{Α}\)$        | $\(s_{i} = s_{i} \oplus w_{i}, \quad \forall i \in \text{state indices}\)$              |
+| SubBytes      | $\(\text{Σ}\)$        | $\(s_{i} = \Sigma(s_{i}), \quad \forall i \in \text{state indices}\)$                   |
+| ShiftRows     | $\(\text{Σ}\)$        | $\(S = \text{Σ}(S)\)$                                                                   |
+| MixColumns    | $\(\text{Μ}\)$        | $\(c = \text{Μ}(c), \quad \forall c \in \text{columns of } S\)$                         |
 
 
 ### 1. Key Expansion  
