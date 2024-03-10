@@ -1,7 +1,7 @@
 
-### RSA Cryptographic Claims Summary
+# RSA Cryptographic Claims Summary
 
-### RSA Cryptographic Algorithm Explained with Pseudocode
+## RSA Cryptographic Algorithm Explained with Pseudocode
 
 #### 1. Initialization:
 The first step in the RSA algorithm is to generate the keys used for encryption and decryption. This involves selecting prime numbers and computing necessary values based on them.
@@ -86,7 +86,7 @@ Important Notes:
 
 ---- 
 
-### RSA Cryptographic System Pseudocode
+## RSA Cryptographic System Pseudocode
 
 #### Initialization:
 1. Generate two large prime numbers, `p` and `q`.
