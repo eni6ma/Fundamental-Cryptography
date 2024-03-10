@@ -29,35 +29,25 @@ To convert the pseudocode functions into mathematical notations, I'll describe e
 
 ### 1. Key Expansion (\(\text{Κ}\))
 Given a cipher key \( k \), produce a series of round keys \( \mathbf{W} \) for each round \( r \).
-$$
-\mathbf{W}_r = \text{Κ}(k, r)
-$$
+$$\mathbf{W}_r = \text{Κ}(k, r)$$
 This involves operations like byte rotation \( \text{RotWord} \), S-box substitution \( \text{SubWord} \), and round constant addition \( \text{Rcon} \) application.
 
 ### 2. Add Round Key (\(\text{Α}\))
 For each byte in the state \( s \) and the round key \( w \), perform an XOR operation.
-$$
-s'_{i} = s_{i} \oplus w_{i}, \quad \forall i \in \text{state indices}
-$$
+$$s'_{i} = s_{i} \oplus w_{i}, \quad \forall i \in \text{state indices}$$
 
 ### 3. SubBytes (\(\text{Σ}\))
 For each byte \( s_i \) in the state, apply the S-box transformation \( \Sigma \).
-$$
-s'_{i} = \Sigma(s_{i}), \quad \forall i \in \text{state indices}
-$$
+$$s'_{i} = \Sigma(s_{i}), \quad \forall i \in \text{state indices}$$
 
 ### 4. ShiftRows (\(\text{Σ}\))
 Shift rows of the state matrix \( S \) by different offsets.
-$$
-S' = \text{Σ}(S)
-$$
+$$S' = \text{Σ}(S)$$
 Where the shift operation depends on the row index.
 
 ### 5. MixColumns (\(\text{Μ}\))
 For each column \( c \) in the state matrix, apply the MixColumns transformation \( \text{Μ} \).
-$$
-c' = \text{Μ}(c), \quad \forall c \in \text{columns of } S
-$$
+$$c' = \text{Μ}(c), \quad \forall c \in \text{columns of } S$$
 Involves polynomial multiplication over \( \text{GF}(2^8) \).
 
 Each of these equations represents a step in the AES encryption process, utilizing transformations and operations defined in the AES specification.
