@@ -1,6 +1,28 @@
 
 # RSA Cryptographic Claims Summary
 
+
+| Claim Number | Summary |
+|--------------|---------|
+| 1 | Establishes a cryptographic communications system that includes a communications channel, an encoding mechanism to transform a message $M$ into a ciphertext $C$ using a composite number $n = p \cdot q$ (where $p$ and $q$ are prime), and a decoding mechanism to transform $C$ back to message $M'$. $C$ and $M'$ are determined by $C \equiv M^e \mod n$ and $M' \equiv C^d \mod n$ respectively, with $e$ and $d$ being specially chosen numbers. |
+| 2 | Describes the components involved in the transformation process, including registers for storing digital signals and an exponentiation network for processing these signals based on modulo multiplication. |
+| 3 | Details a communications system for transferring message signals $M_i$ across $k$ terminals, each with unique encoding and decoding keys, highlighting how messages are encoded for transmission. |
+| 4 | Similar to claim 2, focusing on the system components that support the transformation process within the context of message signal encoding across terminals. |
+| 5 | Adds the functionality of transmitting the encoded message from the first terminal to the second terminal and decoding it back to the original message format. |
+| 6 | Expands the encoding mechanism to include conversion of a signed message into one or more signed message block word signals and then into signed ciphertext word signals for enhanced message encoding. |
+| 7 | Involves transmitting the signed ciphertext from the first to the second terminal and decoding it back to the original signed message and then to the plain message. |
+| 8 | Describes a system for transferring a message signal $M_i$ among $k$ terminals, where each terminal can encode a message into block word signals for transmission, indicating a scalable communication system. |
+| 9 | Reiterates the system's capabilities in transforming message signals through a series of registers and an exponentiation network, similar to claims 2 and 4. |
+| 10 | Focuses on transmitting ciphertext word signals between terminals and decoding them to recover the original message signals. |
+| 11 | Enhances the encoding system to include the transformation of ciphertext into signed ciphertext word signals for secure transmission between terminals. |
+| 12 | Details the process of decoding signed ciphertext word signals to recover the original message signal, highlighting the system's decryption capabilities. |
+| 13 | Describes a communications system with multiple terminals capable of encoding and decoding message signals through specified encoding and decoding keys, emphasizing secure message transmission. |
+| 14 | Similar to previous transformation process descriptions, focusing on the encoding and decoding mechanisms within a multi-terminal communications system. |
+| 15 - 22 | Extensions and variations of the described system and methods, emphasizing the robustness and flexibility of the cryptographic communications system in handling different types of message signals and encryption/decryption processes. |
+
+Ensure each mathematical equation is properly escaped with the dollar sign ($) for LaTeX notation in Markdown.
+
+
 ## RSA Cryptographic Algorithm Explained with Pseudocode
 
 #### 1. Initialization:
