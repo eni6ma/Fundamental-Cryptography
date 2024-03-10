@@ -27,31 +27,31 @@ AES is a symmetric block cipher that encrypts and decrypts data in fixed-size bl
 
 To convert the pseudocode functions into mathematical notations, I'll describe each operation with equations using Greek symbols for functions and variables. Note that these representations are simplified and conceptual, aiming to capture the essence of the AES operations rather than detailed algorithmic steps.
 
-### 1. Key Expansion ${\Κappa}$
+### 1. Key Expansion  
 Given a cipher key $\( k \)$, produce a series of round keys $\( \mathbf{W} \)$ for each round \( r \).
 
 $$\mathbf{W}_r = \text{Κ}(k, r)$$
 
 This involves operations like byte rotation $\( \text{RotWord} \)$, S-box substitution $\( \text{SubWord} \)$, and round constant addition $\( \text{Rcon} \)$ application.
 
-### 2. Add Round Key ${\Αlpha}$
+### 2. Add Round Key 
 For each byte in the state \( s \) and the round key \( w \), perform an XOR operation.
 
 $$s_{i} = s_{i} \oplus w_{i}, \quad \forall i \in \text{state indices}$$
 
-### 3. SubBytes ${\Sigma}$
+### 3. SubBytes 
 For each byte $\( s_i \)$ in the state, apply the S-box transformation $\( \Sigma \)$.
 
 $$s_{i} = \Sigma(s_{i}), \quad \forall i \in \text{state indices}$$
 
-### 4. ShiftRows ${Sigma}$
+### 4. ShiftRows 
 Shift rows of the state matrix $\( S \)$ by different offsets.
 
 $$S = \text{Σ}(S)$$
 
 Where the shift operation depends on the row index.
 
-### 5. MixColumns $Μ$
+### 5. MixColumns  
 For each column $\( c \)$ in the state matrix, apply the MixColumns transformation $\( \text{Μ} \)$.
 
 $$c = \text{Μ}(c), \quad \forall c \in \text{columns of } S$$
