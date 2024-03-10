@@ -2,6 +2,54 @@
 ### RSA Cryptographic Claims Summary
 
 
+### RSA Cryptographic System Pseudocode
+
+#### Initialization:
+1. Generate two large prime numbers, `p` and `q`.
+2. Compute $n = p \times q$.
+3. Calculate Euler's totient function, $\phi = (p-1) \times (q-1)$.
+4. Choose an encryption exponent, `e`, such that $1 < e < \phi$ and $\gcd(e, \phi) = 1$.
+5. Determine the decryption exponent, `d`, as the multiplicative inverse of `e` modulo $\phi$.
+
+#### Encoding (Encryption):
+- **Input**: Message `M` to be encoded, ensuring $0 \leq M < n$.
+- **Process**:
+  - Convert the message `M` into a number representative of the message within the range $[0, n-1]$.
+  - Compute the ciphertext `C` by raising `M` to the power of `e` and taking the modulus `n`: $C = M^e \mod n$.
+- **Output**: Ciphertext `C`.
+
+#### Decoding (Decryption):
+- **Input**: Ciphertext `C` to be decoded.
+- **Process**:
+  - Recover the original message `M'` by raising `C` to the power of `d` and taking the modulus `n`: $M' = C^d \mod n$.
+- **Output**: Decoded message `M'`.
+
+#### Functional Blocks:
+- **KeyGeneration**(`p`, `q`):
+  - Compute $n = p \times q$.
+  - Calculate $\phi = (p-1) \times (q-1)$.
+  - Choose `e` such that $\gcd(e, \phi) = 1$.
+  - Compute `d = e^{-1} \mod \phi`.
+  - Return `(e, d, n)`.
+
+- **Encrypt**(`M`, `e`, `n`):
+  - Verify $0 \leq M < n$.
+  - Calculate $C = M^e \mod n$.
+  - Return `C`.
+
+- **Decrypt**(`C`, `d`, `n`):
+  - Calculate $M' = C^d \mod n$.
+  - Return `M'`.
+
+#### Example Usage:
+- `(e, d, n) = KeyGeneration(p, q)`
+- `C = Encrypt(M, e, n)`
+- `M' = Decrypt(C, d, n)`
+
+Ensure $M = M'$ for the process to be correct. The security of the RSA system relies on the difficulty of factoring the product of two large primes.
+
+
+
 
 | Claim | Summary | Equation(s) |
 |-------|---------|-------------|
