@@ -2,14 +2,14 @@
 
 by Dylan Rosario (Inventor of Rosario Cypher, Chairman of Eni6ma.org)
 
- A. [Secure By Design](https://github.com/eni6ma-org/Fundamental-Cryptography/blob/main/SecureByDesign.md)
- B. [Security Patterns](https://github.com/eni6ma-org/Fundamental-Cryptography/blob/main/Patterns.md)
- C. [Cryptographic Primitives](https://github.com/eni6ma-org/Fundamental-Cryptography/blob/main/Primitives.md)
- D. [Primnitive Pattern Flows](https://github.com/eni6ma-org/Fundamental-Cryptography/blob/main/Flow.md)
- E. Examples 
- 1. [Diffie-Hellman-Cryptographic-apparatus-method](https://github.com/eni6ma-org/Fundamental-Cryptography/blob/main/Diffie-Hellman-Cryptographic-apparatus-method.md)
- 2. [AES Encryption](https://github.com/eni6ma-org/Fundamental-Cryptography/blob/main/AES-CRYPTOGRAPHY.md)
- 3. [RSA Key Exchange](https://github.com/eni6ma-org/Fundamental-Cryptography/blob/main/RSA-ALGORITHM.md)
+ 1. [Secure By Design](https://github.com/eni6ma-org/Fundamental-Cryptography/blob/main/SecureByDesign.md)
+ 2. [Security Patterns](https://github.com/eni6ma-org/Fundamental-Cryptography/blob/main/Patterns.md)
+ 3. [Cryptographic Primitives](https://github.com/eni6ma-org/Fundamental-Cryptography/blob/main/Primitives.md)
+ 4. [Primnitive Pattern Flows](https://github.com/eni6ma-org/Fundamental-Cryptography/blob/main/Flow.md)
+ 5. Examples 
+  -  [Diffie-Hellman-Cryptographic-apparatus-method](https://github.com/eni6ma-org/Fundamental-Cryptography/blob/main/Diffie-Hellman-Cryptographic-apparatus-method.md)
+  - [AES Encryption](https://github.com/eni6ma-org/Fundamental-Cryptography/blob/main/AES-CRYPTOGRAPHY.md)
+  - [RSA Key Exchange](https://github.com/eni6ma-org/Fundamental-Cryptography/blob/main/RSA-ALGORITHM.md)
 
 
 ## Primitive functions for Cryptographic systems
