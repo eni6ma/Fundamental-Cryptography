@@ -1,4 +1,4 @@
-Security Primitives & Patterns
+# Security Primitives & Patterns
 
 1. **[Authentication](https://github.com/eni6ma-org/Fundamental-Cryptography/blob/main/Patterns.md#1-authentication)**: Shows the steps from user input through to system verification of credentials.
 2. **[Verification](https://github.com/eni6ma-org/Fundamental-Cryptography/blob/main/Patterns.md#2-verification)**: Details the process from data submission, hash generation, digital signature creation, to verification and outcome.
@@ -10,14 +10,17 @@ Security Primitives & Patterns
 8. **[Private Identity](https://github.com/eni6ma-org/Fundamental-Cryptography/blob/main/Patterns.md#8-private-identity)**: Describes steps involved in creating and managing a private identity securely.
 9. **[Sovereign Identity](https://github.com/eni6ma-org/Fundamental-Cryptography/blob/main/Patterns.md#9-sovereign-identity)**: Outlines the creation and management of a sovereign identity using blockchain technology.
 10. **[Single Sign-On (SSO)](https://github.com/eni6ma-org/Fundamental-Cryptography/blob/main/Patterns.md#10-single-sign-on-sso)**: Shows the process from initial login through to token verification and access outcome.
-11. **Consensus**: Details the steps from transaction initiation to the consensus process and final blockchain update.
-12. **Authority**: Follows the role assignment to the authentication, authorization, and access decision processes, including audit logging.
-13. **Provenance**: Covers everything from data creation, processing, and review to audits and decision-making based on verified data.
-14. **Non-Repudiation**: Describes the sequence from message creation and digital signing to signature verification and validation of non-denial.
-15. **Validation of Ownership**: Shows the steps from ownership claim through credential verification to the validation of ownership based on matching credentials and rights.
-16. **Verification of Ledger Log**: Details the process from transaction initiation, through authentication and signing, to the consensus process and final ledger update.
-17. **Irrefutable Evidence**: Covers the sequence from data capture, cryptographic sealing, secure storage, to the availability of verification tools and the use of data in legal and compliance contexts.
+11. **[Consensus](https://github.com/eni6ma-org/Fundamental-Cryptography/blob/main/Patterns.md#11-consensus)**: Details the steps from transaction initiation to the consensus process and final blockchain update.
+12. **[Authority](https://github.com/eni6ma-org/Fundamental-Cryptography/blob/main/Patterns.md#12-authority)**: Follows the role assignment to the authentication, authorization, and access decision processes, including audit logging.
+13. **[Provenance](https://github.com/eni6ma-org/Fundamental-Cryptography/blob/main/Patterns.md#13-provenance)**: Covers everything from data creation, processing, and review to audits and decision-making based on verified data.
+14. **[Non-Repudiation](https://github.com/eni6ma-org/Fundamental-Cryptography/blob/main/Patterns.md#14-non-repudiation)**: Describes the sequence from message creation and digital signing to signature verification and validation of non-denial.
+15. **[Validation of Ownership](https://github.com/eni6ma-org/Fundamental-Cryptography/blob/main/Patterns.md#15-validation-of-ownership)**: Shows the steps from ownership claim through credential verification to the validation of ownership based on matching credentials and rights.
+16. **[Verification of Ledger Log](https://github.com/eni6ma-org/Fundamental-Cryptography/blob/main/Patterns.md#16-verification-of-data)**: Details the process from transaction initiation, through authentication and signing, to the consensus process and final ledger update.
+17. **[Irrefutable Evidence](https://github.com/eni6ma-org/Fundamental-Cryptography/blob/main/Patterns.md#17-irrefutable-evidence)**: Covers the sequence from data capture, cryptographic sealing, secure storage, to the availability of verification tools and the use of data in legal and compliance contexts.
 
+---
+
+# **Patterns & Primitives**
 
 # 1. Authentication
 Authentication is the process of verifying the identity of a user, device, or entity before granting access to a system or resource. It often involves validating credentials such as passwords, digital certificates, or biometric data against a known record. In cryptography and security, authentication ensures that an entity is who it claims to be, preventing unauthorized access and enabling secure communication.
