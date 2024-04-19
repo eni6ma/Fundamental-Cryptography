@@ -1,15 +1,15 @@
 Security Primitives & Patterns
 
-1. **Authentication**: Shows the steps from user input through to system verification of credentials.
-2. **Verification**: Details the process from data submission, hash generation, digital signature creation, to verification and outcome.
-3. **Access Control**: Follows the login to the access request, role verification, and access decision.
-4. **Permissions**: Covers the setting up of permissions by an admin to the checking of permissions during a user operation.
-5. **Authority and Rights**: Details the assignment of rights and checks performed during a user action.
-6. **Voting Ballot**: Follows the process of secure voting from login to encrypted submission.
-7. **Certification**: Covers the entire lifecycle of a digital certificate from request to usage and verification.
-8. **Private Identity**: Describes steps involved in creating and managing a private identity securely.
-9. **Sovereign Identity**: Outlines the creation and management of a sovereign identity using blockchain technology.
-10. **Single Sign-On (SSO)**: Shows the process from initial login through to token verification and access outcome.
+1. **[Authentication](https://github.com/eni6ma-org/Fundamental-Cryptography/blob/main/Patterns.md#1-authentication)**: Shows the steps from user input through to system verification of credentials.
+2. **[Verification](https://github.com/eni6ma-org/Fundamental-Cryptography/blob/main/Patterns.md#2-verification)**: Details the process from data submission, hash generation, digital signature creation, to verification and outcome.
+3. **[Access Control](https://github.com/eni6ma-org/Fundamental-Cryptography/blob/main/Patterns.md#3-access-control)**: Follows the login to the access request, role verification, and access decision.
+4. **[Permissions](https://github.com/eni6ma-org/Fundamental-Cryptography/blob/main/Patterns.md#4-permissions)**: Covers the setting up of permissions by an admin to the checking of permissions during a user operation.
+5. **[Authority and Rights](https://github.com/eni6ma-org/Fundamental-Cryptography/blob/main/Patterns.md#5-authority-and-rights)**: Details the assignment of rights and checks performed during a user action.
+6. **[Voting Ballot](https://github.com/eni6ma-org/Fundamental-Cryptography/blob/main/Patterns.md#6-voting-ballot)**: Follows the process of secure voting from login to encrypted submission.
+7. **[Certification](https://github.com/eni6ma-org/Fundamental-Cryptography/blob/main/Patterns.md#7-certification)**: Covers the entire lifecycle of a digital certificate from request to usage and verification.
+8. **[Private Identity](https://github.com/eni6ma-org/Fundamental-Cryptography/blob/main/Patterns.md#8-private-identity)**: Describes steps involved in creating and managing a private identity securely.
+9. **[Sovereign Identity](https://github.com/eni6ma-org/Fundamental-Cryptography/blob/main/Patterns.md#9-sovereign-identity)**: Outlines the creation and management of a sovereign identity using blockchain technology.
+10. **[Single Sign-On (SSO)](https://github.com/eni6ma-org/Fundamental-Cryptography/blob/main/Patterns.md#10-single-sign-on-sso)**: Shows the process from initial login through to token verification and access outcome.
 11. **Consensus**: Details the steps from transaction initiation to the consensus process and final blockchain update.
 12. **Authority**: Follows the role assignment to the authentication, authorization, and access decision processes, including audit logging.
 13. **Provenance**: Covers everything from data creation, processing, and review to audits and decision-making based on verified data.
