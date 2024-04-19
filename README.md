@@ -1,6 +1,6 @@
 # Fundamental-Cryptography
 
-by Dylan Rosario (Inventor of Rosario Cypher, Chairman of Eni6ma.org)
+by [Dylan Rosario](https://linktr.ee/DylanRosario)  ~ Inventor of Rosario Cypher, Chairman of [Eni6ma.org](https://Eni6ma.org)
 
  1. [Secure By Design](https://github.com/eni6ma-org/Fundamental-Cryptography/blob/main/SecureByDesign.md)
  2. [Security Patterns](https://github.com/eni6ma-org/Fundamental-Cryptography/blob/main/Patterns.md)
