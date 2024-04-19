@@ -12,6 +12,27 @@ by [Dylan Rosario](https://linktr.ee/DylanRosario)  ~ Inventor of Rosario Cypher
   - [RSA Key Exchange](https://github.com/eni6ma-org/Fundamental-Cryptography/blob/main/RSA-ALGORITHM.md)
 
 
+# Security Primitives & Patterns
+
+1. **[Authentication](https://github.com/eni6ma-org/Fundamental-Cryptography/blob/main/Patterns.md#1-authentication)**: Shows the steps from user input through to system verification of credentials.
+2. **[Verification](https://github.com/eni6ma-org/Fundamental-Cryptography/blob/main/Patterns.md#2-verification)**: Details the process from data submission, hash generation, digital signature creation, to verification and outcome.
+3. **[Access Control](https://github.com/eni6ma-org/Fundamental-Cryptography/blob/main/Patterns.md#3-access-control)**: Follows the login to the access request, role verification, and access decision.
+4. **[Permissions](https://github.com/eni6ma-org/Fundamental-Cryptography/blob/main/Patterns.md#4-permissions)**: Covers the setting up of permissions by an admin to the checking of permissions during a user operation.
+5. **[Authority and Rights](https://github.com/eni6ma-org/Fundamental-Cryptography/blob/main/Patterns.md#5-authority-and-rights)**: Details the assignment of rights and checks performed during a user action.
+6. **[Voting Ballot](https://github.com/eni6ma-org/Fundamental-Cryptography/blob/main/Patterns.md#6-voting-ballot)**: Follows the process of secure voting from login to encrypted submission.
+7. **[Certification](https://github.com/eni6ma-org/Fundamental-Cryptography/blob/main/Patterns.md#7-certification)**: Covers the entire lifecycle of a digital certificate from request to usage and verification.
+8. **[Private Identity](https://github.com/eni6ma-org/Fundamental-Cryptography/blob/main/Patterns.md#8-private-identity)**: Describes steps involved in creating and managing a private identity securely.
+9. **[Sovereign Identity](https://github.com/eni6ma-org/Fundamental-Cryptography/blob/main/Patterns.md#9-sovereign-identity)**: Outlines the creation and management of a sovereign identity using blockchain technology.
+10. **[Single Sign-On (SSO)](https://github.com/eni6ma-org/Fundamental-Cryptography/blob/main/Patterns.md#10-single-sign-on-sso)**: Shows the process from initial login through to token verification and access outcome.
+11. **[Consensus](https://github.com/eni6ma-org/Fundamental-Cryptography/blob/main/Patterns.md#11-consensus)**: Details the steps from transaction initiation to the consensus process and final blockchain update.
+12. **[Authority](https://github.com/eni6ma-org/Fundamental-Cryptography/blob/main/Patterns.md#12-authority)**: Follows the role assignment to the authentication, authorization, and access decision processes, including audit logging.
+13. **[Provenance](https://github.com/eni6ma-org/Fundamental-Cryptography/blob/main/Patterns.md#13-provenance)**: Covers everything from data creation, processing, and review to audits and decision-making based on verified data.
+14. **[Non-Repudiation](https://github.com/eni6ma-org/Fundamental-Cryptography/blob/main/Patterns.md#14-non-repudiation)**: Describes the sequence from message creation and digital signing to signature verification and validation of non-denial.
+15. **[Validation of Ownership](https://github.com/eni6ma-org/Fundamental-Cryptography/blob/main/Patterns.md#15-validation-of-ownership)**: Shows the steps from ownership claim through credential verification to the validation of ownership based on matching credentials and rights.
+16. **[Verification of Ledger Log](https://github.com/eni6ma-org/Fundamental-Cryptography/blob/main/Patterns.md#16-verification-of-data)**: Details the process from transaction initiation, through authentication and signing, to the consensus process and final ledger update.
+17. **[Irrefutable Evidence](https://github.com/eni6ma-org/Fundamental-Cryptography/blob/main/Patterns.md#17-irrefutable-evidence)**: Covers the sequence from data capture, cryptographic sealing, secure storage, to the availability of verification tools and the use of data in legal and compliance contexts.
+
+
 ## Primitive functions for Cryptographic systems
 
 In the realms of cryptographic systems, including AES-Rijndael, RSA, and Diffie-Hellman, a fundamental reliance on mathematical principles underpins secure communication. The initiation of these protocols involves receiving input values or keys, marked as $\alpha$ and $\beta$. These inputs are pivotal, fueling the ensuing series of transformations and encryptions. An initial transformation function, denoted as $\Phi$, adapts these inputs for further cryptographic processes. This function's nature varies across algorithms: $\Phi$ might signify key expansion within AES, the derivation of public keys in Diffie-Hellman, or engage in modular arithmetic for RSA key creation.
