@@ -7,7 +7,7 @@ by [Dylan Rosario](https://linktr.ee/DylanRosario)  ~ Inventor of Rosario Cypher
  3. [Cryptographic Primitives](https://github.com/eni6ma-org/Fundamental-Cryptography/blob/main/Primitives.md)
  4. [Primnitive Pattern Flows](https://github.com/eni6ma-org/Fundamental-Cryptography/blob/main/Flow.md)
  5. Examples 
-  -  [Diffie-Hellman-Cryptographic-apparatus-method](https://github.com/eni6ma-org/Fundamental-Cryptography/blob/main/Diffie-Hellman-Cryptographic-apparatus-method.md)
+  - [Diffie-Hellman-Cryptographic-apparatus-method](https://github.com/eni6ma-org/Fundamental-Cryptography/blob/main/Diffie-Hellman-Cryptographic-apparatus-method.md)
   - [AES Encryption](https://github.com/eni6ma-org/Fundamental-Cryptography/blob/main/AES-CRYPTOGRAPHY.md)
   - [RSA Key Exchange](https://github.com/eni6ma-org/Fundamental-Cryptography/blob/main/RSA-ALGORITHM.md)
 
@@ -31,6 +31,18 @@ by [Dylan Rosario](https://linktr.ee/DylanRosario)  ~ Inventor of Rosario Cypher
 15. **[Validation of Ownership](https://github.com/eni6ma-org/Fundamental-Cryptography/blob/main/Patterns.md#15-validation-of-ownership)**: Shows the steps from ownership claim through credential verification to the validation of ownership based on matching credentials and rights.
 16. **[Verification of Ledger Log](https://github.com/eni6ma-org/Fundamental-Cryptography/blob/main/Patterns.md#16-verification-of-data)**: Details the process from transaction initiation, through authentication and signing, to the consensus process and final ledger update.
 17. **[Irrefutable Evidence](https://github.com/eni6ma-org/Fundamental-Cryptography/blob/main/Patterns.md#17-irrefutable-evidence)**: Covers the sequence from data capture, cryptographic sealing, secure storage, to the availability of verification tools and the use of data in legal and compliance contexts.
+
+
+
+
+## TOC:
+
+ -  [Cryptographic Theory](https://github.com/eni6ma-org/Fundamental-Cryptography/blob/main/README.md#theory)
+ -  [AES Description](https://github.com/eni6ma-org/Fundamental-Cryptography/blob/main/README.md#aes--cyptography)
+ -  [Diffie/Hellman PKI](https://github.com/eni6ma-org/Fundamental-Cryptography/blob/main/README.md#diffie-hellman---key-exchange)
+ -  [RSA](https://github.com/eni6ma-org/Fundamental-Cryptography/blob/main/README.md#rsa---key-exchange-algorithm)
+
+
 
 
 ## Primitive functions for Cryptographic systems
